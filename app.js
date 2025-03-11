@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     const images = [
-        "images/Valorant home.jpg",
-        "images/FS25 home.jpg",
-        "images/COD MW 3 home.jpg",
-        "images/PUBG home.jpg",
-        "images/Gran Turismo 7 home.jpg"
+        "Images/Valorant home.jpg",
+        "Images/FS25 home.jpg",
+        "Images/COD MW 3 home.jpg",
+        "Images/PUBG home.jpg",
+        "Images/Gran Turismo 7 home.jpg"
     ];
 
     let index = 1;
