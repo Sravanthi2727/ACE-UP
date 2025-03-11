@@ -31,5 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
         index = (index + 1) % images.length;
     }
 
-    setInterval(changeImage, 3000);
+    setInterval(changeImage, 5000);
 });
