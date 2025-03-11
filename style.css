@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -24,15 +24,15 @@ body {
   background-color: #1e1e1e;
   color: white;
   z-index: 1000;
-  h1 {
-    font-family: "Curlz MT";
-    font-size: xx-large;
-    transition: font-size 1s;
+  h1{
+      font-family: 'Curlz MT';
+      font-size: xx-large;
+      transition: font-size 1s;
   }
-  h1:hover {
-    cursor: pointer;
-    color: #ff9800;
-    font-size: xxx-large;
+  h1:hover{
+      cursor: pointer;
+      color: #1db954;
+      font-size: xxx-large;
   }
 }
 
@@ -42,7 +42,7 @@ body {
   height: 60px;
   margin-left: 1em;
   border-radius: 50%;
-  background-image: url("Images/Ace Up.jpg");
+  background-image: url("/images/Ace\ Up.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -75,7 +75,7 @@ body {
 
 .nav button:hover {
   cursor: pointer;
-  background-color: #ff9800;
+  background-color: #1db954;
   color: whitesmoke;
   width: 100%;
   height: 100%;
@@ -100,17 +100,18 @@ body {
   width: 150px;
   height: 50px;
   margin-top: 1em;
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: large;
-    transition: font-size 1s;
+  a{
+      text-decoration: none;
+      color: white;
+      font-size: large;
+      transition: font-size 1s;
   }
-  a:hover {
-    color: #ff9800;
-    font-size: x-large;
+  a:hover{
+      color: #1db954;
+      font-size: x-large;
   }
 }
+
 
 /* Main Content Styling */
 #main-content {
@@ -146,12 +147,12 @@ body {
   cursor: pointer;
   width: 75%;
   height: 550px;
+  
 }
 /* Top Games Sidebar */
 #top-games {
   width: 20%;
   height: 500px;
-  margin-top: 1em;
   margin-left: 1em;
   border-radius: 5px;
   display: flex;
@@ -168,20 +169,21 @@ body {
   align-items: center;
   color: white;
   /* background-color: rgba(255, 255, 255, 0.4); */
-
-  transition: width 0.5s, height 0.5s, opacity 0.5s;
+  
+  transition: width 0.5s, height 0.5s,opacity 0.5s;
   display: flex;
   gap: 2%;
   align-items: center;
-  .ban {
-    height: 90%;
-    width: 30%;
-    img {
-      border-radius: 3px;
-      height: 100%;
-      width: 50%;
-    }
+  .ban{
+      height: 90%;
+      width: 30%;
+      img{
+          border-radius: 3px;
+          height: 100%;
+          width: 60%;
+      }
   }
+ 
 }
 
 .g:hover {
@@ -191,6 +193,7 @@ body {
   height: 30%;
   opacity: 0.75;
 }
+
 
 /* Game Rows */
 #row1 {
