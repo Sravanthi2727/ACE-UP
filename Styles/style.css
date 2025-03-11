@@ -160,16 +160,18 @@ body {
     display: flex;
     align-items: center;
     background-color: blueviolet;
-    transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s,opacity 0.5s;
+    
 }
 
 .g:hover {
     cursor: pointer;
-    background-color: rgb(188, 188, 117);
     color: white;
     width: 95%;
     height: 30%;
+    opacity: 0.75;
 }
+
 
 /* Game Rows */
 #row1 {
