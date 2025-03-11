@@ -1,4 +1,7 @@
 # ACE-UP
+
+Our Page link : https://sravanthi2727.github.io/ACE-UP/
+
 This project is a web-based digital storefront inspired by the Epic Store, allowing users to browse, purchase, and download games. It features agame listings, and secure transactions. Built with HTML, CSS, and JavaScript, the platform aims to provide a seamless user experience while implementing essential e-commerce functionalities.
 
 our main objectives:
@@ -17,5 +20,6 @@ our main objectives:
         12.we will give some class to all games so it will be easy to use filter button
         13. by clicking on any game we will redirect him to page of that game
         14. there will be many options such as to purchase game and to add cart etc
+        
 
 ---> if you got more ideas please add on <-----
