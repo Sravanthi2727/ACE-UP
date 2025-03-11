@@ -6,12 +6,28 @@ document.addEventListener("DOMContentLoaded", function () {
         "Images/PUBG home.jpg",
         "Images/Gran Turismo 7 home.jpg"
     ];
+    const names = [
+        "Valorant",
+        "FS 25",
+        "Call Of Duty Modern Warfare 3",
+        "PUBG",
+        "Gran Turismo 7"
+    ];
+    const prices = [
+        "Play for Free",
+        "Only for Rs. 1000",
+        "Only for Rs. 3000",
+        "Play for Free",
+        "Only for Rs. 4000"
+    ];
 
     let index = 1;
     const gameDisplay = document.getElementById("game-display");
+    const pr = gameDisplay.querySelector("p"); // Target the first <p> inside #game-display
 
     function changeImage() {
         gameDisplay.style.backgroundImage = `url('${images[index]}')`;
+        pr.innerHTML = `${names[index]}<br>${prices[index]}`; // Update the content
         index = (index + 1) % images.length;
     }
 

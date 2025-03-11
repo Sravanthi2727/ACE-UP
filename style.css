@@ -191,6 +191,11 @@ body {
   align-items: end;
   gap: 5%;
   padding: 1em;
+  p{
+      font-size: x-large;
+      font-weight: bold;
+  }
+  
 }
 #game-display:hover {
   cursor: pointer;
