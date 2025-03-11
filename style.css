@@ -111,6 +111,55 @@ body {
       font-size: x-large;
   }
 }
+#symbol{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  font-size: x-large;
+  height: 20%;
+}
+#youtube{
+  transition: font-size 1s;
+}
+#youtube:hover{
+    color: red;
+    font-size: xxx-large;
+    cursor: pointer;
+}
+#facebook{
+    transition: font-size 1s;
+}
+#facebook:hover{
+    color: #1877f2;
+    font-size: xxx-large;
+    cursor: pointer;
+}
+#linkedin{
+    transition: font-size 1s;
+}
+#linkedin:hover{
+    color: #0a66c2;
+    font-size: xxx-large;
+    cursor: pointer;
+}
+#github{
+    transition: font-size 1s;
+}
+#github:hover{
+    color: #6e5494;
+    font-size: xxx-large;
+    cursor: pointer;
+}
+#twitter{
+    transition: font-size 1s;
+}
+#twitter:hover{
+    color: #1da1f2;
+    font-size: xxx-large;
+    cursor: pointer;
+}
 
 
 /* Main Content Styling */
@@ -213,4 +262,17 @@ body {
   margin: 2em;
   border-radius: 7px;
   background-color: chartreuse;
+}
+footer{
+  height: 300px;
+  background-color: #333;
+  border-radius: 5px;
+  margin-left: 28vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  pre{
+      color: white;
+      padding: 1em;
+  }
 }
