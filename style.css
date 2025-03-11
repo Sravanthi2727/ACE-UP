@@ -42,7 +42,7 @@ body {
   height: 60px;
   margin-left: 1em;
   border-radius: 50%;
-  background-image: url("/images/Ace\ Up.jpg");
+  background-image: url("Images/Ace Up.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -136,7 +136,7 @@ body {
   border-radius: 7px;
   color: white;
   transition: width 0.5s, height 0.5s;
-  background-image: url("/images/Valorant\ home.jpg");
+  background-image: url("Images/Valorant home.jpg");
   background-size: cover;
   display: flex;
   align-items: end;
