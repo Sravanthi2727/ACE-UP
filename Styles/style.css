@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 body {
@@ -24,6 +24,16 @@ body {
   background-color: #1e1e1e;
   color: white;
   z-index: 1000;
+  h1{
+      font-family: 'Curlz MT';
+      font-size: xx-large;
+      transition: font-size 1s;
+  }
+  h1:hover{
+      cursor: pointer;
+      color: #ff9800;
+      font-size: xxx-large;
+  }
 }
 
 /* Logo Styling */
@@ -90,26 +100,18 @@ body {
   width: 150px;
   height: 50px;
   margin-top: 1em;
+  a{
+      text-decoration: none;
+      color: white;
+      font-size: large;
+      transition: font-size 1s;
+  }
+  a:hover{
+      color: #ff9800;
+      font-size: x-large;
+  }
 }
 
-.cem button {
-  width: 92%;
-  height: 92%;
-  font-size: x-large;
-  color: white;
-  background-color: #333;
-  border-radius: 5px;
-  border: none;
-  transition: width 0.5s, height 0.5s;
-}
-
-.cem button:hover {
-  cursor: pointer;
-  background-color: #ff9800;
-  color: whitesmoke;
-  width: 100%;
-  height: 100%;
-}
 
 /* Main Content Styling */
 #main-content {
@@ -132,14 +134,20 @@ body {
   margin-top: 1em;
   margin-left: 2em;
   border-radius: 7px;
-  background-color: aqua;
+  color: white;
   transition: width 0.5s, height 0.5s;
+  background-image: url("/images/Valorant\ home.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: end;
+  gap: 5%;
+  padding: 1em;
 }
 #game-display:hover {
   cursor: pointer;
-  color: white;
   width: 75%;
   height: 550px;
+  
 }
 /* Top Games Sidebar */
 #top-games {
@@ -157,10 +165,26 @@ body {
   width: 90%;
   height: 20%;
   margin: 1em;
+  padding-left: 1em;
   display: flex;
   align-items: center;
-  background-color: blueviolet;
-  transition: width 0.5s, height 0.5s, opacity 0.5s;
+  color: white;
+  /* background-color: rgba(255, 255, 255, 0.4); */
+  
+  transition: width 0.5s, height 0.5s,opacity 0.5s;
+  display: flex;
+  gap: 2%;
+  align-items: center;
+  .ban{
+      height: 90%;
+      width: 30%;
+      img{
+          border-radius: 3px;
+          height: 100%;
+          width: 50%;
+      }
+  }
+ 
 }
 
 .g:hover {
@@ -170,6 +194,7 @@ body {
   height: 30%;
   opacity: 0.75;
 }
+
 
 /* Game Rows */
 #row1 {
