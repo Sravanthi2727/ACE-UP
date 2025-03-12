@@ -23,11 +23,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let index = 1;
     const gameDisplay = document.getElementById("game-display");
-    const pr = gameDisplay.querySelector("p"); // Target the first <p> inside #game-display
+    const gn = gameDisplay.querySelector("#game-na"); // Target the first <p> inside #game-display
+    const gp = gameDisplay.querySelector("#game-pr"); // Target the first <p> inside #game-display
 
     function changeImage() {
         gameDisplay.style.backgroundImage = `url('${images[index]}')`;
-        pr.innerHTML = `${names[index]}<br>${prices[index]}`; // Update the content
+        gn.textContent = names[index]; 
+        gp.textContent = prices[index];
         index = (index + 1) % images.length;
     }
 
