@@ -46,3 +46,21 @@ close_btn.addEventListener("click", function () {
     filter.style.visibility = "hidden";
     filter.style.transform = "scale(0)";
 });
+
+const login = document.querySelector("#popup-login");
+const login_btn = document.querySelector("#profile-btn");
+const close_log_btn = document.querySelector("#login-submit");
+const a=()=>{
+    login.style.visibility = "visible";
+    login.style.transform = "scale(1)";
+}
+a();
+
+login_btn.addEventListener("click", function () {
+    login.style.visibility = "visible";
+    login.style.transform = "scale(1)";
+});
+close_log_btn.addEventListener("click", function () {
+    login.style.visibility = "hidden";
+    login.style.transform = "scale(0)";
+});

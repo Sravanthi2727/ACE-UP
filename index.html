@@ -24,7 +24,7 @@
                     </button>
                 </div>
                 <div id="profile" class="nav">
-                    <button>
+                    <button id="profile-btn">
                         <i class="fa-solid fa-user"></i>
                         Sign-Up
                     </button>
@@ -64,6 +64,31 @@
                 <div id="block1">
                     <div id="game-display">
                         <p> Valorant<br> Play for Free</p>
+                    </div>
+                    <div id="popup-login">
+                        <div class="login-container">
+                            <div class="login-box">
+                                <h2>Login</h2>
+                                <form>
+                                    <div class="input-group">
+                                        <label for="email">E-mail</label>
+                                        <input type="email" id="email" name="email" placeholder="Enter your E-mail"
+                                            required />
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="username">Username</label>
+                                        <input type="text" id="username" name="username"
+                                            placeholder="Enter your username" required />
+                                    </div>
+                                    <div class="input-group">
+                                        <label for="pwd">Password</label>
+                                        <input type="password" id="pwd" name="pwd" placeholder="Enter your password"
+                                            pattern=".{8,}" required />
+                                    </div>
+                                    <button type="submit" id="login-submit">Sumbit</button>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                     <div id="popup-filter">
                         <div id="filter">
