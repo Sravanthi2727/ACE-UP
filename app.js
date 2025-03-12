@@ -31,5 +31,18 @@ document.addEventListener("DOMContentLoaded", function () {
         index = (index + 1) % images.length;
     }
 
-    setInterval(changeImage, 5000);
+    setInterval(changeImage, 3000);
+});
+
+const filter = document.querySelector("#popup-filter");
+const fil_btn = document.querySelector("#filter-btn");
+const close_btn = document.querySelector("#filter-submit");
+
+fil_btn.addEventListener("click", function () {
+    filter.style.visibility = "visible";
+    filter.style.transform = "scale(1)";
+});
+close_btn.addEventListener("click", function () {
+    filter.style.visibility = "hidden";
+    filter.style.transform = "scale(0)";
 });

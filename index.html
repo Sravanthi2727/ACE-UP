@@ -18,7 +18,7 @@
             <h1>Ace-Up</h1>
             <div id="con">
                 <div id="filters" class="nav">
-                    <button>
+                    <button id="filter-btn">
                         <i class="fa-solid fa-filter"></i>
                         Filters
                     </button>
@@ -64,6 +64,68 @@
                 <div id="block1">
                     <div id="game-display">
                         <p> Valorant<br> Play for Free</p>
+                    </div>
+                    <div id="popup-filter">
+                        <div id="filter">
+                            <div id="head">
+                                <h1><i class="fa-solid fa-filter"></i>Filters</h1>
+                            </div>
+                            <div id="box1">
+                                <label for="genere">Genere</label>
+                                <select id="genere">
+                                    <option>-select-</option>
+                                    <option value="FPS">FPS</option>
+                                    <option value="RPG">RPG</option>
+                                    <option value="Strategy">Strategy</option>
+                                    <option value="Horror">Horror</option>
+                                    <option value="Sports">Sports</option>
+                                    <option value="Adventure">Adventure</option>
+                                </select>
+                            </div>
+                            <div id="box2">
+                                <label for="platform">Platform</label>
+                                <select id="platform">
+                                    <option>-select-</option>
+                                    <option value="PC">PC</option>
+                                    <option value="Playstation">Playstation</option>
+                                    <option value="Xbox">Xbox</option>
+                                    <option value="Switch">Switch</option>
+                                </select>
+                            </div>
+                            <div id="box3">
+                                <label for="price">Price $0</label>
+                                <input type="range" id="price" min="0" max="5000" value="50">$
+                                <label id="live-value">print value</label>
+                            </div>
+                            <div id="box4">
+                                <label for="multiplayer">Multiplayer</label>
+                                <input type="checkbox" id="multiplayer" valvue="multiplayer">
+                                <label for="singleplayer">Singleplayer</label>
+                                <input type="checkbox" id="singleplayer" value="singleplayer">
+                            </div>
+                            <div id="box5">
+                                <label for="mode">Mode</label>
+                                <select>
+                                    <option>-select-</option>
+                                    <option value="Story">Story</option>
+                                    <option value="Open World">Open World</option>
+                                    <option value="Battelroyal">Battelroyal</option>
+                                </select>
+                            </div>
+                            <div id="box6">
+                                <lable for="graphic">Graphic Type</lable>
+                                <select>
+                                    <option>-select-</option>
+                                    <option value="Realistic">Realistic</option>
+                                    <option value="Cartoon">Cartoon</option>
+                                    <option value="Pixel Art">Pixel Art</option>
+                                </select>
+                            </div>
+                            <div id="submit">
+                                <p>Ready to find your perfect <i class="fa-solid fa-gamepad"></i>? </p>
+                                <input id="filter-submit" type="submit" value="Filter">
+                            </div>
+                        </div>
                     </div>
                     <div id="top-games">
                         <div id="game1" class="g">
