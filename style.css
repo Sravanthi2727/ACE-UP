@@ -506,7 +506,7 @@ body {
   margin-left: 2em;
   border-radius: 7px;
   color: white;
-  transition: width 0.5s, height 0.5s;
+  transition: width 0.5s, height 0.5s,background-image 2s;
   background-image: url("Images/Valorant home.jpg");
   background-size: cover;
   display: flex;
