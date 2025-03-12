@@ -23,12 +23,19 @@
                         Filters
                     </button>
                 </div>
-                <div id="profile" class="nav">
+                <div id="login" class="nav">
                     <button id="profile-btn">
                         <i class="fa-solid fa-user"></i>
                         Sign-Up
                     </button>
                 </div>
+            </div>
+            <div class="profile">
+                <h4>Vajud04</h4>
+            </div>
+            <div class="profile">
+                <p>G-Cash</p>
+                <p><i class="fa-solid fa-sack-dollar"></i><span></span></p>
             </div>
         </div>
 
@@ -73,20 +80,20 @@
                                 <form>
                                     <div class="input-group">
                                         <label for="email">E-mail</label>
-                                        <input type="email" id="email" name="email" placeholder="Enter your E-mail"
+                                        <input type="email" id="email" name="email" placeholder="Enter your E-mail"  onkeyup="checkform()"
                                             required />
                                     </div>
                                     <div class="input-group">
                                         <label for="username">Set-Username</label>
-                                        <input type="text" id="username" name="username"
+                                        <input type="text" id="username" name="username" onkeyup="checkform()"
                                             placeholder="Enter your username" required />
                                     </div>
                                     <div class="input-group">
                                         <label for="pwd">Set-Password</label>
-                                        <input type="password" id="pwd" name="pwd" placeholder="Enter your password"
+                                        <input type="password" id="pwd" name="pwd" placeholder="Enter your password" onkeyup="checkform()"
                                             pattern=".{8,}" required />
                                     </div>
-                                    <button type="submit" id="login-submit">Sumbit</button>
+                                    <button type="submit" id="login-submit" disabled="disabled">Sumbit</button>
                                 </form>
                             </div>
                         </div>
