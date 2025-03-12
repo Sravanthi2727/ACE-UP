@@ -47,6 +47,7 @@ body {
   background-image: url("Images/Ace Up.jpg");
   background-size: cover;
   background-position: center;
+  transform: scale(1.2);
 }
 
 /* Navbar Buttons Container */
