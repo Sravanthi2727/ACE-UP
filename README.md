@@ -13,10 +13,10 @@ our main objectives:
            5. if user clicks on sign up we will show them if they want to log out?
            6. if user clicks on cart we will redirect him to cart page
            7. if user clicks on whishlist we will redirect him to wishlist page
-           8. if user clicks on G-Vault we wull redirect him to page where he is able to see all his purchased games
-           9. there is a big block on web page that screen will show top 5 games one by one in some time interval
-           10 that games will also be shown on right side of that big block
-           11.then we will show other games beside it
+           8. if user clicks on G-Vault we will redirect him to page where he is able to see all his purchased games
+    ✅    9. there is a big block on web page that screen will show top 5 games one by one in some time interval
+    ✅   10 that games will also be shown on right side of that big block
+    ✅    11.then we will show other games behind it
            12.we will give some class to all games so it will be easy to use filter button
            13. by clicking on any game we will redirect him to page of that game
            14. there will be many options such as to purchase game and to add cart etc
