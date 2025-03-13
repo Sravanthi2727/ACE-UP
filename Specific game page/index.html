@@ -17,12 +17,7 @@
             <div id="logo"></div>
             <h1>Ace-Up</h1>
             <div id="con">
-                <div id="filters" class="nav">
-                    <button id="filter-btn">
-                        <i class="fa-solid fa-filter"></i>
-                        Filters
-                    </button>
-                </div>
+
                 <div id="login" class="nav">
                     <button id="profile-btn">
                         <i class="fa-solid fa-user"></i>
@@ -68,10 +63,36 @@
                 </div>
             </div>
             <div id="main-content">
+                <div id="popup-login">
+                    <div class="login-container">
+                        <div class="login-box">
+                            <h2>Create your Account</h2>
+                            <form>
+                                <div class="input-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your E-mail"
+                                        onkeyup="checkform()" required />
+                                </div>
+                                <div class="input-group">
+                                    <label for="username">Set-Username</label>
+                                    <input type="text" id="username" name="username" onkeyup="checkform()"
+                                        placeholder="Enter your username" required />
+                                </div>
+                                <div class="input-group">
+                                    <label for="pwd">Set-Password</label>
+                                    <input type="password" id="pwd" name="pwd" placeholder="Enter your password"
+                                        onkeyup="checkform()" pattern=".{8,}" required />
+                                </div>
+                                <button id="login-submit" disabled="disabled">Sumbit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div id="sect-1">
                     <h1 id="valo">VALORANT</h1>
                     <p id="rating">&#x2606 &#x2606 &#x2606 &#x2606 &#x2606 4.5 </p>
-                    <video  src="/Videos/DAWN BREAKS _ Waylay Agent Trailer - VALORANT.mp4" muted autoplay controls></video>
+                    <video src="/Videos/DAWN BREAKS _ Waylay Agent Trailer - VALORANT.mp4" muted autoplay
+                        controls></video>
                     <p id="small-description">VALORANT is a character-based 5v5 tactical shooter set on the global
                         stage. Outwit, outplay, and
                         outshine your competition with tactical abilities, precise gunplay, and adaptive teamwork.</p>
@@ -86,23 +107,23 @@
                         <div class="genre">
                             <h4>Features</h4>
                             <div>
-                            <button>Multiplayer</button>
-                            <button>Competetive</button>
+                                <button>Multiplayer</button>
+                                <button>Competetive</button>
                             </div>
                         </div>
                     </div>
                     <div id="description">
                         <h3 id="second-valo">VALORANT</h3>
                         <h5 id="dialouge">DEFY THE LIMITS FOR FREE IN VALORANT</h5>
-                        <p class="large-description"><b style="color: #1DB954;">FIGHT AROUND THE WORLD </b>:-  
-                             Blend your style and experience on a global, competitive stage. Attack and defend your side
+                        <p class="large-description"><b style="color: #1DB954;">FIGHT AROUND THE WORLD </b>:-
+                            Blend your style and experience on a global, competitive stage. Attack and defend your side
                             using sharp gunplay and tactical abilities. And, with one life per-round, you'll have to
                             think
                             faster than your opponent if you want to survive.
                         </p>
                         <p class="large-description">
-                            <b style="color: #1DB954;">CREATIVITY IS YOUR GREATEST WEAPON</b> :- 
-                             More than guns and bullets, you will choose an Agent armed with adaptive, swift, and lethal
+                            <b style="color: #1DB954;">CREATIVITY IS YOUR GREATEST WEAPON</b> :-
+                            More than guns and bullets, you will choose an Agent armed with adaptive, swift, and lethal
                             abilities that create opportunities to let your gunplay shine. Each map is purpose-built for
                             team strategies, spectacular plays, and clutch moments. Make the plays others will imitate
                             for
@@ -188,17 +209,20 @@
                             <div id="lang">
                                 <h5>Languages Supported</h5>
                                 <p>
-                                    Audio: Portuguese - Brazil, Polish, Arabic, French, German, Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese - Traditional, Vietnamese, Turkish, Korean
+                                    Audio: Portuguese - Brazil, Polish, Arabic, French, German, Italian, Spanish -
+                                    Spain, Japanese, Russian, Thai, Chinese - Traditional, Vietnamese, Turkish, Korean
                                 </p>
                                 <p>
-                                    Text: Portuguese - Brazil, Polish, Arabic, French, German, Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese - Traditional, Turkish, Vietnamese, Korean
+                                    Text: Portuguese - Brazil, Polish, Arabic, French, German, Italian, Spanish - Spain,
+                                    Japanese, Russian, Thai, Chinese - Traditional, Turkish, Vietnamese, Korean
                                 </p>
 
                                 <p id="copy-right">
-                                    © 2020-2025 Ace-Up, Inc. VALORANT and the VALORANT Logo are trademarks, service marks, and/or registered trademarks of Ace-Up, Inc.
+                                    © 2020-2025 Ace-Up, Inc. VALORANT and the VALORANT Logo are trademarks, service
+                                    marks, and/or registered trademarks of Ace-Up, Inc.
                                 </p>
                             </div>
-                        </div>  
+                        </div>
                     </div>
                 </div>
             </div>

@@ -8,6 +8,7 @@
 
 body {
   background-color: #121212;
+  color: white;
 }
 
 /* Navbar Styling */
@@ -17,25 +18,25 @@ body {
   left: 0;
   width: 100%;
   height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   padding: 1rem;
   background-color: #1e1e1e;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   z-index: 1000;
+}
 
-  h1 {
-    font-family: 'Curlz MT';
-    font-size: xx-large;
-    transition: font-size 1s;
-  }
+#navbar h1 {
+  font-family: 'Curlz MT';
+  font-size: xx-large;
+  transition: font-size 1s;
+}
 
-  h1:hover {
-    cursor: pointer;
-    color: #1db954;
-    font-size: xxx-large;
-  }
+#navbar h1:hover {
+  cursor: pointer;
+  color: #1db954;
+  font-size: xxx-large;
 }
 
 /* Logo Styling */
@@ -50,14 +51,13 @@ body {
   transform: scale(1.3);
 }
 
-/* Navbar Buttons Container */
+/* Navbar Buttons */
 #con {
   display: flex;
   justify-content: space-around;
   width: 35%;
 }
 
-/* Navbar Buttons */
 .nav {
   display: flex;
   align-items: center;
@@ -71,9 +71,9 @@ body {
   font-size: x-large;
   color: white;
   background-color: #333;
-  border-radius: 5px;
-  transition: width 0.5s, height 0.5s;
   border: none;
+  border-radius: 5px;
+  transition: all 0.5s;
 }
 
 .nav button:hover {
@@ -84,6 +84,7 @@ body {
   height: 100%;
 }
 
+/* Profile */
 .profile {
   display: flex;
   flex-direction: column;
@@ -100,7 +101,6 @@ body {
   position: relative;
   top: 1.5px;
   visibility: hidden;
-
 }
 
 .profile:hover {
@@ -110,6 +110,7 @@ body {
   cursor: pointer;
 }
 
+/* Sidebar */
 #shop {
   position: fixed;
   top: 80px;
@@ -121,25 +122,24 @@ body {
   width: fit-content;
 }
 
-/* Sidebar Buttons */
 .cem {
   display: flex;
   align-items: center;
   width: 150px;
   height: 50px;
   margin-top: 1em;
+}
 
-  a {
-    text-decoration: none;
-    color: white;
-    font-size: large;
-    transition: font-size 1s;
-  }
+.cem a {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  transition: font-size 1s;
+}
 
-  a:hover {
-    color: #1db954;
-    font-size: x-large;
-  }
+.cem a:hover {
+  color: #1db954;
+  font-size: x-large;
 }
 
 #symbol {
@@ -152,18 +152,10 @@ body {
   height: 20%;
 }
 
-#youtube {
-  transition: font-size 1s;
-}
-
 #youtube:hover {
   color: red;
   font-size: xxx-large;
   cursor: pointer;
-}
-
-#facebook {
-  transition: font-size 1s;
 }
 
 #facebook:hover {
@@ -172,18 +164,10 @@ body {
   cursor: pointer;
 }
 
-#linkedin {
-  transition: font-size 1s;
-}
-
 #linkedin:hover {
   color: #0a66c2;
   font-size: xxx-large;
   cursor: pointer;
-}
-
-#github {
-  transition: font-size 1s;
 }
 
 #github:hover {
@@ -192,23 +176,13 @@ body {
   cursor: pointer;
 }
 
-#twitter {
-  transition: font-size 1s;
-}
-
 #twitter:hover {
   color: #1da1f2;
   font-size: xxx-large;
   cursor: pointer;
 }
 
-
-/* Game Display Section */
-#block1 {
-  display: flex;
-  flex-direction: row;
-}
-
+/* Popup Login */
 #popup-login {
   display: flex;
   justify-content: center;
@@ -223,288 +197,92 @@ body {
   transition: transform 1s;
   visibility: hidden;
   z-index: 2000;
-
-  .login-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .login-box {
-    background-color: #222;
-    color: white;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    text-align: center;
-    width: 320px;
-  }
-
-  /* Heading */
-  .login-box h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-  }
-
-  /* Input Group */
-  .input-group {
-    text-align: left;
-    margin-bottom: 15px;
-  }
-
-  .input-group label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-
-  .input-group input {
-    width: 100%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #444;
-    background-color: #333;
-    color: white;
-    border-radius: 6px;
-    outline: none;
-    transition: 0.3s ease-in-out;
-  }
-
-  /* Input Focus */
-  .input-group input:focus {
-    border-color: #1db954;
-    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
-  }
-
-  /* Button */
-  #login-submit {
-    width: 100%;
-    padding: 12px;
-    font-size: 16px;
-    background-color: #1db954;
-    border: none;
-    color: white;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: 0.3s;
-    opacity: 0.5;
-  }
-
-  /* Button Hover Effect */
-  #submit:hover {
-    background-color: #17a34a;
-  }
-
-  /* Responsive Design */
-  @media (max-width: 400px) {
-    .login-box {
-      width: 90%;
-      padding: 20px;
-    }
-  }
-
 }
 
-#popup-filter {
+#popup-login .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(0, 0, 0, 0.5);
-  position: fixed;
-  top: 0;
-  left: 0;
-  transform: scale(0.1);
-  transition: transform 1s;
-  visibility: hidden;
-  z-index: 2000;
-
-  #filter {
-    text-align: center;
-    width: 70vh;
-    border: 2px solid black;
-    background-color: #222;
-    border-radius: 5px;
-    margin-top: 1em;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.75);
-
-    div {
-      padding-top: 1em;
-      padding-bottom: 1em;
-    }
-  }
-
-  #head {
-    color: #1DB954;
-  }
-
-  #box1 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    select {
-      width: fit-content;
-      font-size: large;
-      border-radius: 5px;
-      transition: width 0.5s;
-      border: none;
-      background-color: #6e5494;
-      color: white;
-    }
-
-    select:hover {
-      width: 40%;
-      color: white;
-
-    }
-  }
-
-  #box2 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    select {
-      width: fit-content;
-      font-size: large;
-      border-radius: 5px;
-      transition: width 0.5s;
-      border: none;
-      background-color: #6e5494;
-      color: white;
-    }
-
-    select:hover {
-      width: 40%;
-      color: white;
-
-    }
-  }
-
-  #box3 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    input {
-      width: fit-content;
-      font-size: large;
-      border-radius: 5px;
-      border: none;
-      background-color: #6e5494;
-      color: white;
-    }
-  }
-
-  #box4 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    input {
-      width: 1.5em;
-
-    }
-  }
-
-  #box5 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    select {
-      width: fit-content;
-      font-size: large;
-      border-radius: 5px;
-      transition: width 0.5s;
-      border: none;
-      background-color: #6e5494;
-      color: white;
-    }
-
-    select:hover {
-      width: 40%;
-      color: white;
-
-    }
-  }
-
-  #box6 {
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-    color: white;
-    font-size: x-large;
-
-    select {
-      width: fit-content;
-      font-size: large;
-      border-radius: 5px;
-      transition: width 0.5s;
-      border: none;
-      background-color: #6e5494;
-      color: white;
-    }
-
-    select:hover {
-      width: 40%;
-      color: white;
-
-    }
-  }
-
-  #submit {
-    margin-top: 0.5em;
-    color: yellow;
-    border: none;
-    border-radius: 5px;
-    font-size: large;
-
-    input {
-      margin-top: 1em;
-      background-color: #1DB954;
-      opacity: 0.75;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      font-size: x-large;
-      height: 2em;
-      width: 7em;
-    }
-
-    input:hover {
-      opacity: 1;
-    }
-  }
+  width: 100%;
 }
 
+#popup-login .login-box {
+  background-color: #222;
+  color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+  text-align: center;
+  width: 320px;
+}
+
+#popup-login .login-box h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.input-group {
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #444;
+  background-color: #333;
+  color: white;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s ease-in-out;
+}
+
+.input-group input:focus {
+  border-color: #1db954;
+  box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+}
+
+#login-submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  background-color: #1db954;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s;
+  opacity: 0.5;
+}
+
+#login-submit:hover {
+  background-color: #17a34a;
+}
+
+
+
+/* Main Content */
 #main-content {
   width: 100%;
   padding-top: 14vh;
   padding-left: 28vh;
-  color: white;
   display: flex;
   justify-content: space-around;
   align-items: flex-start;
+  color: white;
 }
 
 #sect-1 {
+  width: 70%;
   display: flex;
   flex-direction: column;
-  width: 70%;
   margin-bottom: 2rem;
 }
 
@@ -521,8 +299,7 @@ body {
 }
 
 #rating {
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em 0;
   font-weight: bolder;
   font-size: large;
   font-family: 'Courier New', Courier, monospace;
@@ -532,6 +309,7 @@ body {
   width: 100%;
   margin-bottom: 3em;
   border-radius: 5px;
+  transition: box-shadow 0.3s;
 }
 
 #sect-1 video:hover {
@@ -555,33 +333,33 @@ body {
 .genre {
   display: flex;
   flex-direction: column;
+}
 
-  h4 {
-    margin-bottom: 1em;
-    font-weight: lighter;
-    font-family: Geneva, Verdana, sans-serif;
-    transition: font-size 1s;
-  }
+.genre h4 {
+  margin-bottom: 1em;
+  font-weight: lighter;
+  font-family: Geneva, Verdana, sans-serif;
+  transition: font-size 1s;
+}
 
-  h4:hover {
-    cursor: pointer;
-    color: #1da1f2;
-    font-size: large;
-  }
+.genre h4:hover {
+  cursor: pointer;
+  color: #1da1f2;
+  font-size: large;
+}
 
-  button {
-    padding: 0.3em;
-    border: none;
-    border-radius: 5px;
-    background-color: #444;
-    color: #ffffff;
-  }
+.genre button {
+  padding: 0.3em;
+  border: none;
+  border-radius: 5px;
+  background-color: #444;
+  color: #fff;
+  transition: background-color 0.3s;
+}
 
-  button:hover {
-    cursor: pointer;
-    background-color: #6e5494;
-    color: white;
-  }
+.genre button:hover {
+  cursor: pointer;
+  background-color: #6e5494;
 }
 
 #description {
@@ -605,70 +383,75 @@ body {
 
 #dialouge {
   font-size: large;
-
 }
 
-#sect-2{
- width: 30%;
- display: flex;
+/* Section 2 */
+#sect-2 {
+  width: 30%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2em;
   padding-top: 8em;
- img{
+}
+
+#sect-2 img {
   width: 50%;
-  height: 20%;
+  height: auto;
   transform: scale(1.3);
   transition: transform 0.5s;
   margin-bottom: 4em;
- } 
- img:hover{
+}
+
+#sect-2 img:hover {
   transform: scale(1.5);
- }
- #base{
+}
+
+#sect-2 #base {
   width: 25%;
   padding: 0.5em;
   border: none;
   border-radius: 6px;
   background-color: #444;
-  color: #ffffff;
+  color: #fff;
   margin-top: 1em;
- }
- .bt{
+}
+
+#sect-2 .bt {
   width: 45%;
   padding: 0.5em;
   border-radius: 5px;
   border: none;
   display: flex;
+  align-items: center;
+  justify-content: center;
   gap: 1em;
   font-size: large;
   background-color: rgb(227, 211, 60);
-  transition: transform 1s;
- }
- .bt:hover{
-  background-color: #1DB954;
-  color: #ffffff;
+  transition: transform 1s, background-color 0.3s;
+}
+
+#sect-2 .bt:hover {
+  background-color: #1db954;
+  color: #fff;
   transform: scale(1.1);
   cursor: pointer;
- }
 }
 
-#system-requirment{
+/* System Requirements */
+#system-requirment {
   width: 100%;
   padding-left: 28vh;
-  color: white;
-  margin-top: 3em;
-  margin-bottom: 3em;
+  margin: 3em 0;
   overflow: hidden;
-  
-  
 }
 
-#my-os{
+#my-os {
   font-size: x-large;
   margin-bottom: 3em;
 }
-#comparison{
+
+#comparison {
   display: flex;
   justify-content: space-between;
   background-color: #444;
@@ -678,46 +461,55 @@ body {
   padding-left: 5%;
   box-shadow: 0px 0px 10px 5px #444;
 }
-#mini-rec{
+
+#mini-rec {
   display: flex;
   justify-content: space-around;
-}
-#mini{
-  width: 90%;
-  h3{
-    margin-top: 0.5em;
-  }
-  div{
-    display: flex;
-    margin-top: 2em;
-    width: 100%;
-    div{
-      display: flex;
-      flex-direction: column;
-      justify-content:left;
-      h5{
-        color:darkgray
-      }
-      p{
-        margin-top: 0.5em;
-      }
-    }
-  }
-}
-#lang{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 2em;
-  h5{
-    margin-top:4em ;
-    color:darkgray
-  }
-  #copy-right{
-    color: darkgray;
-  }
 }
 
+#mini {
+  width: 90%;
+}
+
+#mini h3 {
+  margin-top: 0.5em;
+}
+
+#mini>div {
+  display: flex;
+  margin-top: 2em;
+  width: 100%;
+}
+
+#mini>div>div {
+  display: flex;
+  flex-direction: column;
+}
+
+#mini>div>div h5 {
+  color: darkgray;
+}
+
+#mini>div>div p {
+  margin-top: 0.5em;
+}
+
+#lang {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+#lang h5 {
+  margin-top: 4em;
+  color: darkgray;
+}
+
+#lang #copy-right {
+  color: darkgray;
+}
+
+/* Footer */
 footer {
   height: 300px;
   background-color: #333;
@@ -725,10 +517,13 @@ footer {
   margin-left: 28vh;
   display: flex;
   justify-content: center;
-  align-items: end;
-
-  pre {
-    color: white;
-    padding: 1em;
-  }
+  align-items: flex-end;
 }
+
+footer pre {
+  color: white;
+  padding: 1em;
+}
+
+
+/* // Note: Nested selectors (e.g. within .genre or #sect-2 img) have been flattened for plain CSS. */
