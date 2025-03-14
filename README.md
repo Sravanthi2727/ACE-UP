@@ -10,8 +10,8 @@ our main objectives:
     ✅    2. after login we will give them some amount of Gcash to spend it in our store
     ✅    3. if user clicks on filter button we will pop up a page where many filters are available
            4. if user clicks on support button we will redirect him to our support page
-           5. if user clicks on cart we will redirect him to cart page
-           6. if user clicks on whishlist we will redirect him to wishlist page
+    ✅     5. if user clicks on cart we will redirect him to cart page
+    ✅     6. if user clicks on whishlist we will redirect him to wishlist page
            7. if user clicks on G-Vault we will redirect him to page where he is able to see all his purchased games
     ✅    8. there is a big block on web page that screen will show top 5 games one by one in some time interval
     ✅   11 that games will also be shown on right side of that big block
