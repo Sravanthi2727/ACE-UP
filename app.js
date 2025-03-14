@@ -57,7 +57,11 @@ login_btn.addEventListener("click", function () {
     login.style.visibility = "visible";
     login.style.transform = "scale(1)";
 });
-close_log_btn.addEventListener("click", function () {
+
+// Prevent form submission
+const loginForm = document.querySelector("#popup-login form");
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
     login.style.visibility = "hidden";
     login.style.transform = "scale(0)";
 });
@@ -87,11 +91,9 @@ passwordInput.addEventListener("input", checkForm);
 const profileDivs = document.querySelectorAll(".profile");
 
 close_log_btn.addEventListener("click", () => {
-
     profileDivs[0].querySelector("h4").textContent = usernameInput.value;
     profileDivs[1].querySelector("span").textContent = "10000";
     profileDivs.forEach(profile => profile.style.visibility = "visible");
     document.querySelector("#login").style.visibility = "hidden";
 });
 
-    
