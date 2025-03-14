@@ -282,8 +282,8 @@ const profileDivs = document.querySelectorAll(".profile");
 close_log_btn.addEventListener("click", () => {
     profileDivs[0].querySelector("h4").textContent = usernameInput.value;
     profileDivs[1].querySelector("span").textContent = "10000";
-    profileDivs.forEach(profile => profile.style.visibility = "visible");
-    document.querySelector("#login").style.visibility = "hidden";
+    profileDivs.forEach(profile => profile.style.display = "flex");
+    document.querySelector("#login").style.display = "none";
 });
 
 
