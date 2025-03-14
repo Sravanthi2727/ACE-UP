@@ -15,7 +15,9 @@
     <header>
         <div id="navbar">
             <div id="logo"></div>
-            <h1>Ace-Up</h1>
+            <a href="index.html">
+                <h1>Ace-Up</h1>
+            </a>
             <div id="con">
                 <div id="filters" class="nav">
                     <button id="filter-btn">
@@ -67,98 +69,104 @@
                     <i id="twitter" class="fa-brands fa-twitter"></i>
                 </div>
             </div>
+            <div id="popup-filter">
+                <div id="filter">
+                    <div id="head">
+                        <h1><i class="fa-solid fa-filter"></i>Filters</h1>
+                    </div>
+                    <div id="box1">
+                        <label for="genre">Genre</label>
+                        <select id="genre">
+                            <option value="select">-select-</option>
+                            <option value="FPS">FPS</option>
+                            <option value="RPG">RPG</option>
+                            <option value="Strategy">Strategy</option>
+                            <option value="Horror">Horror</option>
+                            <option value="Sports">Sports</option>
+                            <option value="Adventure">Adventure</option>
+                        </select>
+                    </div>
+                    <div id="box2">
+                        <label for="platform">Platform</label>
+                        <select id="platform">
+                            <option value="select">-select-</option>
+                            <option value="PC">PC</option>
+                            <option value="Playstation">Playstation</option>
+                            <option value="Xbox">Xbox</option>
+                            <option value="Switch">Switch</option>
+                        </select>
+                    </div>
+                    <div id="box3">
+                        <label for="price">Price $0</label>
+                        <input type="range" id="price" min="0" max="6000" value="50">$
+                        <label id="live-value">print value</label>
+                    </div>
+                    <div id="box4">
+                        <label for="multiplayer">Multiplayer</label>
+                        <input type="radio" name="type" class="type" value="Multiplayer">
+                        <label for="singleplayer">Singleplayer</label>
+                        <input type="radio" name="type" class="type" value="Singleplayer">
+                    </div>
+                    <div id="box5">
+                        <label for="mode">Mode</label>
+                        <select id="mode">
+                            <option value="select">-select-</option>
+                            <option value="Story">Story</option>
+                            <option value="Open World">Open World</option>
+                            <option value="Battelroyal">Battelroyal</option>
+                            <option value="Shooter">Shooter</option>
+                        </select>
+                    </div>
+                    <div id="box6">
+                        <label for="graphic">Graphic Type</label>
+                        <select id="graphic">
+                            <option value="select">-select-</option>
+                            <option value="Realistic">Realistic</option>
+                            <option value="Cartoon">Cartoon</option>
+                            <option value="Pixel Art">Pixel Art</option>
+                        </select>
+                    </div>
+                    <div id="submit">
+                        <p>Ready to find your perfect <i class="fa-solid fa-gamepad"></i>? </p>
+                        <input id="filter-submit" type="submit" value="Filter">
+                    </div>
+                </div>
+            </div>
+            <div id="popup-login">
+                <div class="login-container">
+                    <div class="login-box">
+                        <h2>Create your Account</h2>
+                        <form>
+                            <div class="input-group">
+                                <label for="email">E-mail</label>
+                                <input type="email" id="email" name="email" placeholder="Enter your E-mail"
+                                    onkeyup="checkform()" required />
+                            </div>
+                            <div class="input-group">
+                                <label for="username">Set-Username</label>
+                                <input type="text" id="username" name="username" onkeyup="checkform()"
+                                    placeholder="Enter your username" required />
+                            </div>
+                            <div class="input-group">
+                                <label for="pwd">Set-Password (greater than 8 chars)</label>
+                                <input type="password" id="pwd" name="pwd" placeholder="Enter your password"
+                                    onkeyup="checkform()" pattern=".{8,}" required />
+                            </div>
+                            <button id="login-submit" disabled="disabled">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
             <div id="main-content">
                 <div id="block1">
                     <div id="game-display">
                         <p id="game-na"> Valorant</p>
                         <p id="game-pr">Play for Free</p>
                     </div>
-                    <div id="popup-login">
-                        <div class="login-container">
-                            <div class="login-box">
-                                <h2>Create your Account</h2>
-                                <form>
-                                    <div class="input-group">
-                                        <label for="email">E-mail</label>
-                                        <input type="email" id="email" name="email" placeholder="Enter your E-mail"  onkeyup="checkform()"
-                                            required />
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="username">Set-Username</label>
-                                        <input type="text" id="username" name="username" onkeyup="checkform()"
-                                            placeholder="Enter your username" required />
-                                    </div>
-                                    <div class="input-group">
-                                        <label for="pwd">Set-Password (greater than 8 chars)</label>
-                                        <input type="password" id="pwd" name="pwd" placeholder="Enter your password" onkeyup="checkform()"
-                                            pattern=".{8,}" required />
-                                    </div>
-                                    <button  id="login-submit" disabled="disabled">Submit</button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="popup-filter">
-                        <div id="filter">
-                            <div id="head">
-                                <h1><i class="fa-solid fa-filter"></i>Filters</h1>
-                            </div>
-                            <div id="box1">
-                                <label for="genere">Genere</label>
-                                <select id="genere">
-                                    <option>-select-</option>
-                                    <option value="FPS">FPS</option>
-                                    <option value="RPG">RPG</option>
-                                    <option value="Strategy">Strategy</option>
-                                    <option value="Horror">Horror</option>
-                                    <option value="Sports">Sports</option>
-                                    <option value="Adventure">Adventure</option>
-                                </select>
-                            </div>
-                            <div id="box2">
-                                <label for="platform">Platform</label>
-                                <select id="platform">
-                                    <option>-select-</option>
-                                    <option value="PC">PC</option>
-                                    <option value="Playstation">Playstation</option>
-                                    <option value="Xbox">Xbox</option>
-                                    <option value="Switch">Switch</option>
-                                </select>
-                            </div>
-                            <div id="box3">
-                                <label for="price">Price $0</label>
-                                <input type="range" id="price" min="0" max="5000" value="50">$
-                                <label id="live-value">print value</label>
-                            </div>
-                            <div id="box4">
-                                <label for="multiplayer">Multiplayer</label>
-                                <input type="checkbox" id="multiplayer" value="multiplayer">
-                                <label for="singleplayer">Singleplayer</label>
-                                <input type="checkbox" id="singleplayer" value="singleplayer">
-                            </div>
-                            <div id="box5">
-                                <label for="mode">Mode</label>
-                                <select>
-                                    <option>-select-</option>
-                                    <option value="Story">Story</option>
-                                    <option value="Open World">Open World</option>
-                                    <option value="Battelroyal">Battelroyal</option>
-                                </select>
-                            </div>
-                            <div id="box6">
-                                <label for="graphic">Graphic Type</label>
-                                <select>
-                                    <option>-select-</option>
-                                    <option value="Realistic">Realistic</option>
-                                    <option value="Cartoon">Cartoon</option>
-                                    <option value="Pixel Art">Pixel Art</option>
-                                </select>
-                            </div>
-                            <div id="submit">
-                                <p>Ready to find your perfect <i class="fa-solid fa-gamepad"></i>? </p>
-                                <input id="filter-submit" type="submit" value="Filter">
-                            </div>
-                        </div>
+                    <!-- i have to show this box when no games are available after filtering -->
+                    <div id="no-game">
+                        <h2>Sorry we have no such Games of your Type</h2>
                     </div>
                     <div id="top-games">
                         <div id="game1" class="g">
@@ -194,7 +202,7 @@
                     </div>
                 </div>
                 <div id="row1">
-                    <div class="gg">
+                    <div class="gg" id="ACV">
                         <div>
                             <img src="Images/Assaisian creed valhallah banner.jpg" alt="Assaisian creed valhallah">
                         </div>
@@ -202,7 +210,7 @@
                         <h3>Assaisian Creed Valhallah</h3>
                         <span>&#8377 2,999</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="DBD">
                         <div>
                             <img src="Images/Dead by daylight banner.jpg" alt="Dead by daylight">
                         </div>
@@ -210,7 +218,7 @@
                         <h3>Dead By Daylight</h3>
                         <span>&#8377 1,159</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="FC25">
                         <div>
                             <img src="Images/FC 25 banner.jpg" alt="FC 25">
                         </div>
@@ -218,7 +226,7 @@
                         <h3>FC 25</h3>
                         <span>&#8377 3,999</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="CODW">
                         <div>
                             <img src="Images/COD warzone banner.jpg" alt="COD warzone">
                         </div>
@@ -226,7 +234,7 @@
                         <h3>COD Warzone</h3>
                         <span>Free to Play</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="Fortnite">
                         <div>
                             <img src="Images/Fornite banner.jpg" alt="Fornite">
                         </div>
@@ -234,7 +242,7 @@
                         <h3>Fortnite</h3>
                         <span>Free to Play</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="WTA">
                         <div>
                             <img src="Images/Warewolf banner.jpg" alt="Warewolf">
                         </div>
@@ -242,7 +250,7 @@
                         <h3>Warewolf: The Apocolypse</h3>
                         <span>&#8377 1,099</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="Hitman2">
                         <div>
                             <img src="Images/Hitman banner.jpg" alt="Hitman">
                         </div>
@@ -250,7 +258,7 @@
                         <h3>Hitman 2</h3>
                         <span>&#8377 2,509</span>
                     </div>
-                    <div class="gg">
+                    <div class="gg" id="ER">
                         <div>
                             <img src="Images/Elden ring banner.jpg" alt="Elden ring">
                         </div>
@@ -258,7 +266,46 @@
                         <h3>Elden Ring</h3>
                         <span>&#8377 5,299</span>
                     </div>
-
+                    <div class="gg" id="Valorant">
+                        <div>
+                            <img src="Images/Valorant banner.jpg" alt="Valorant" class="initial-hidden">
+                        </div>
+                        <p>base game</p>
+                        <h3>Valorant</h3>
+                        <span>Play for Free</span>
+                    </div>
+                    <div class="gg" id="FS25" class="initial-hidden">
+                        <div>
+                            <img src="Images/FS25 banner.jpg" alt="FS 25">
+                        </div>
+                        <p>base game</p>
+                        <h3>FS 25</h3>
+                        <span>&#8377 999</span>
+                    </div>
+                    <div class="gg" id="CODMW3" class="initial-hidden">
+                        <div>
+                            <img src="Images/COD MW 3 banner.jpg" alt="COD MW 3">
+                        </div>
+                        <p>base game</p>
+                        <h3>COD MW 3</h3>
+                        <span>&#8377 2,999</span>
+                    </div>
+                    <div class="gg" id="PUBG" class="initial-hidden">
+                        <div>
+                            <img src="Images/PUBG banner.jpg" alt="PUBG">
+                        </div>
+                        <p>base game</p>
+                        <h3>PUBG</h3>
+                        <span>Play for Free</span>
+                    </div>
+                    <div class="gg" id="GT7" class="initial-hidden">
+                        <div>
+                            <img src="Images/Gran Turismo 7 banner.jpg" alt="Gran Turismo 7">
+                        </div>
+                        <p>base game</p>
+                        <h3>Gran Turismo 7</h3>
+                        <span>&#8377 2,999</span>
+                    </div>
                 </div>
             </div>
         </div>
