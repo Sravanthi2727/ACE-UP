@@ -25,6 +25,11 @@ body {
   color: white;
   z-index: 1000;
 
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
   h1 {
     font-family: 'Curlz MT';
     font-size: xx-large;
@@ -102,6 +107,7 @@ body {
   visibility: hidden;
 
 }
+
 .profile:hover {
   background-color: #1db954;
   transform: scale(1.05);
@@ -201,6 +207,14 @@ body {
   cursor: pointer;
 }
 
+#no-game{
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin-top: 10vh;
+  display: none;
+}
 
 /* Main Content Styling */
 #main-content {
@@ -506,7 +520,7 @@ body {
   margin-left: 2em;
   border-radius: 7px;
   color: white;
-  transition: width 0.5s, height 0.5s,background-image 2s;
+  transition: width 0.5s, height 0.5s, background-image 2s;
   background-image: url("Images/Valorant home.jpg");
   background-size: cover;
   display: flex;
