@@ -163,29 +163,30 @@ let data = [
         graphic: "Realistic",
     }
 ]
-const genre = document.querySelector("#genre");
-const platform = document.querySelector("#platform");
-const type = document.querySelectorAll(".type");
-const mode = document.querySelector("#mode");
-const graphic = document.querySelector("#graphic");
 
-let games = {
-    "Valorant": document.querySelector("#Valorant"),
-    "FS25": document.querySelector("#FS25"),
-    "CODMW3": document.querySelector("#CODMW3"),
-    "PUBG": document.querySelector("#PUBG"),
-    "GT7": document.querySelector("#GT7"),
-    'ACV': document.querySelector("#ACV"),
-    "DBD": document.querySelector("#DBD"),
-    "FC25": document.querySelector("#FC25"),
-    "CODW": document.querySelector("#CODW"),
-    "Fortnite": document.querySelector("#Fortnite"),
-    "WTA": document.querySelector("#WTA"),
-    "Hitman2": document.querySelector("#Hitman2"),
-    "ER": document.querySelector("#ER")
-}
 
-function filter_apply(data, games) {
+function filter_apply(data) {
+    const genre = document.querySelector("#genre");
+    const platform = document.querySelector("#platform");
+    const type = document.querySelectorAll(".type");
+    const mode = document.querySelector("#mode");
+    const graphic = document.querySelector("#graphic");
+
+    let games = {
+        "Valorant": document.querySelector("#Valorant"),
+        "FS25": document.querySelector("#FS25"),
+        "CODMW3": document.querySelector("#CODMW3"),
+        "PUBG": document.querySelector("#PUBG"),
+        "GT7": document.querySelector("#GT7"),
+        'ACV': document.querySelector("#ACV"),
+        "DBD": document.querySelector("#DBD"),
+        "FC25": document.querySelector("#FC25"),
+        "CODW": document.querySelector("#CODW"),
+        "Fortnite": document.querySelector("#Fortnite"),
+        "WTA": document.querySelector("#WTA"),
+        "Hitman2": document.querySelector("#Hitman2"),
+        "ER": document.querySelector("#ER")
+    }
     document.querySelector("#block1").style.display = "none";
     let genre_val = genre.value;
     let platform_val = platform.value;
@@ -198,17 +199,14 @@ function filter_apply(data, games) {
     let mode_val = mode.value;
     let graphic_val = graphic.value;
     let price_val = price.value;
-    let matchCount = 0;
     data.forEach((data) => {
         if (data.genre.includes(genre_val) &&
-            data.platform == platform_val &&
-            data.type == type_val1 &&
-            data.mode == mode_val &&
-            data.graphic == graphic_val &&
+            data.platform === platform_val &&
+            data.type === type_val1 &&
+            data.mode === mode_val &&
+            data.graphic === graphic_val &&
             data.price <= price_val) {
-
-            games[d.name].style.display = "flex";
-
+            games[data.name].style.display = "flex";
         }
         else {
             games[data.name].style.display = "none";
@@ -225,7 +223,7 @@ fil_btn.addEventListener("click", function () {
 close_btn.addEventListener("click", function () {
     filter.style.visibility = "hidden";
     filter.style.transform = "scale(0)";
-    filter_apply(data, games);
+    filter_apply(data);
 });
 //Prize range slider
 let value = document.getElementById("live-value");

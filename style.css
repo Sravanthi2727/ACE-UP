@@ -215,6 +215,8 @@ body {
   display: none;
 }
 
+
+
 /* Main Content Styling */
 #main-content {
   width: 100%;
@@ -614,6 +616,10 @@ body {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
   overflow: hidden;
   position: relative;
+}
+
+.initial-hidden{
+  display: none ;
 }
 
 .gg div {
