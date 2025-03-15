@@ -16,7 +16,7 @@ our main objectives:
     ✅    8. there is a big block on web page that screen will show top 5 games one by one in some time interval
     ✅   11 that games will also be shown on right side of that big block
     ✅    12.then we will show other games behind it
-           13.we will give some class to all games so it will be easy to use filter button
+    ✅      13.we will give some class to all games so it will be easy to use filter button
            14. by clicking on any game we will redirect him to page of that game
            15. there will be many options such as to purchase game and to add cart etc
         
