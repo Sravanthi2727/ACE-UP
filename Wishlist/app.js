@@ -12,6 +12,14 @@ close_log_btn.addEventListener("click", function () {
     login.style.transform = "scale(0)";
 });
 
+// Prevent form submission
+const loginForm = document.querySelector("#popup-login form");
+loginForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+    login.style.visibility = "hidden";
+    login.style.transform = "scale(0)";
+});
+
 const emailInput = document.querySelector("#email");
 const usernameInput = document.querySelector("#username");
 const passwordInput = document.querySelector("#pwd");
@@ -51,5 +59,43 @@ removeBtns.forEach(btn => {
     btn.addEventListener("click", () => { 
         const gameBox = btn.closest(".game-box");
         if (gameBox) gameBox.style.display = "none";
+    });
+});
+
+
+//removing and reducing the G-Cash amount after purchasing
+
+const buyBtns = document.querySelectorAll(".buy-btn");
+buyBtns.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const gameBox = btn.closest(".game-box");
+        if (gameBox) {
+            let ruppes = gameBox.querySelectorAll(".price")[0].textContent;
+            ruppes=ruppes.replace("₹"," ").trim();
+            ruppes=ruppes.replace(",","").trim();
+            console.log(ruppes);
+            if (ruppes=="Free") ruppes=0;
+            else ruppes=parseInt(ruppes);
+            if(check){
+                let gcash = parseInt(profileDivs[1].querySelector("span").textContent);
+                gcash -= ruppes;
+                profileDivs[1].querySelector("span").textContent = gcash;
+                let chu = true;
+                if (gcash<0){
+                    chu = false;
+                    alert("Insufficient G-Cash");
+                    gcash += ruppes;
+                    profileDivs[1].querySelector("span").textContent = gcash;
+                }
+                if(chu){
+                    gameBox.style.display = "none";
+                }
+            }
+            else{
+                alert("Please login first");
+                login.style.visibility = "visible";
+                login.style.transform = "scale(1)";
+            }
+        }
     });
 });
