@@ -61,7 +61,7 @@ body {
   height: 60px;
   margin-left: 1em;
   border-radius: 50%;
-  background-image: url("Images/Ace Up.jpg");
+  background-image: url("../Images/Ace Up.jpg");
   background-size: cover;
   background-position: center;
   transform: scale(1.3);
