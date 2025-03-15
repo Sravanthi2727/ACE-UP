@@ -73,7 +73,6 @@ buyBtns.forEach(btn => {
             let ruppes = gameBox.querySelectorAll(".price")[0].textContent;
             ruppes=ruppes.replace("₹"," ").trim();
             ruppes=ruppes.replace(",","").trim();
-            console.log(ruppes);
             if (ruppes=="Free") ruppes=0;
             else ruppes=parseInt(ruppes);
             if(check){
