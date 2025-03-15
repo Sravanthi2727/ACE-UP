@@ -25,6 +25,23 @@
     background-color: #1e1e1e;
     color: white;
     z-index: 1000;
+
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  
+    h1 {
+      font-family: 'Curlz MT';
+      font-size: xx-large;
+      transition: font-size 1s;
+    }
+  
+    h1:hover {
+      cursor: pointer;
+      color: #1db954;
+      font-size: xxx-large;
+    }
   }
   
   #navbar h1 {
