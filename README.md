@@ -1,6 +1,6 @@
 # ACE-UP
 
-Our Page link : https://sravanthi2727.github.io/ACE-UP/
+Our Page link : https://sravanthi2727.github.io/ACE-UP/  -- this link will won't work from now as we have linked with backend. After creating the link, we will add it.
 
 This project is a web-based digital storefront inspired by the Epic Store, allowing users to browse, purchase, and download games. It features agame listings, and secure transactions. Built with HTML, CSS, and JavaScript, the platform aims to provide a seamless user experience while implementing essential e-commerce functionalities.
 
@@ -17,7 +17,7 @@ our main objectives:
     ✅    11 that games will also be shown on right side of that big block
     ✅    12.then we will show other games behind it
     ✅    13.we will give some class to all games so it will be easy to use filter button
-           14. by clicking on any game we will redirect him to page of that game
+    ✅     14. by clicking on any game we will redirect him to page of that game
            15. there will be many options such as to purchase game and to add cart etc
     ✅     16. On Clicking the Buy Button our G-Cash should be Reduced!
            17.We will create a page which will get redirected when G-cash is over and we will allow to restore it's cash by real payment interference
