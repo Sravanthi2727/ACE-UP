@@ -1,0 +1,434 @@
+s<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wishlist - AceUp</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header>
+        <div id="navbar">
+            <div id="logo"></div>
+             <a href="index.html">
+                <h1>Ace-Up</h1>
+            </a>
+            <div id="con">
+                <div id="login" class="nav">
+                    <button id="profile-btn">
+                        <i class="fa-solid fa-user"></i>
+                        Sign-Up
+                    </button>
+                </div>
+            </div>
+            <div class="profile">
+                <h4>Vajud04</h4>
+            </div>
+            <div class="profile">
+                <p>G-Cash</p>
+                <p><i class="fa-solid fa-sack-dollar"></i><span></span></p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="sec-con">
+            <div id="shop">
+                <div id="cart" class="cem">
+                    <a href="../cart page/index.html"> <i class="fa-solid fa-cart-plus"></i>
+                        Cart</a>
+                </div>
+                <div id="wishlist" class="cem">
+                    <a href="index.html"> <i class="fa-solid fa-list"></i>
+                        Wishlist</a>
+                </div>
+                <div id="gvault" class="cem">
+                    <a href=""><i class="fa-solid fa-gamepad"></i>
+                        G-vault</a>
+                </div>
+                <div id="helpline" class="cem">
+                    <a href=""><i class="fa-solid fa-phone"></i>
+                        Helpline</a>
+                </div>
+                <div id="symbol">
+                    <i id="youtube" class="fa-brands fa-youtube"></i>
+                    <i id="facebook" class="fa-brands fa-facebook"></i>
+                    <i id="linkedin" class="fa-brands fa-linkedin"></i>
+                    <i id="github" class="fa-brands fa-github"></i>
+                    <i id="twitter" class="fa-brands fa-twitter"></i>
+                </div>
+            </div>
+            <div id="main-content">
+                <div id="popup-login">
+                    <div class="login-container">
+                        <div class="login-box">
+                            <h2>Create your Account</h2>
+                            <form>
+                                <div class="input-group">
+                                    <label for="email">E-mail</label>
+                                    <input type="email" id="email" name="email" placeholder="Enter your E-mail"  onkeyup="checkform()"
+                                        required />
+                                </div>
+                                <div class="input-group">
+                                    <label for="username">Set-Username</label>
+                                    <input type="text" id="username" name="username" onkeyup="checkform()"
+                                        placeholder="Enter your username" required />
+                                </div>
+                                <div class="input-group">
+                                    <label for="pwd">Set-Password</label>
+                                    <input type="password" id="pwd" name="pwd" placeholder="Enter your password" onkeyup="checkform()"
+                                        pattern=".{8,}" required />
+                                </div>
+                                <button  id="login-submit" disabled="disabled">Sumbit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <h1>My Wishlist</h1>
+                <div id="display-cart-game">
+                    <div id="valorant" class="game-box">
+                        <img src="../Images/Valorant banner.jpg" alt="Valorant">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Valorant</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ Free</h3>
+                                    <p class="description">Precision, strategy, victory awaits.</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 12 + only  -> Moderate Violence</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Assaisian creed valhallah" class="game-box">
+                        <img src="../Images/Assaisian creed valhallah banner.jpg " alt="Assaisian creed valhallah">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Assaisian creed valhallah</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 2,999</h3>
+                                    <p class="description">Live like a Viking warrior!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only -> Violence, Blood, Mild Language</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="FS 25" class="game-box">
+                        <img src="../Images/FS25 banner.jpg" alt="FS 25">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">FS 25</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 999</h3>
+                                    <p class="description">Build. Harvest. Expand your farm!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 3+ only -> General</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Gran Turismo 7" class="game-box">
+                        <img src="../Images/Gran Turismo 7 banner.jpg" alt="Gran Turismo 7">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Gran Turismo 7</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 3,999</h3>
+                                    <p class="description">War never changes. Fight now!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only -> Strong Violence, Intense Action</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="COD MW 3" class="game-box">
+                        <img src="../Images/COD MW 3 banner.jpg" alt="COD MW 3">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">COD MW 3</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 2,999</h3>
+                                    <p class="description">Build. Harvest. Expand your farm!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 3+ only -> General</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="PUBG" class="game-box">
+                        <img src="../Images/PUBG banner.jpg" alt="PUBG">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">PUBG</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ Free</h3>
+                                    <p class="description">Survive. Shoot. Be the last!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <pFor: 16+ only -> Moderate Violence, Online Interactions</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="COD warzone" class="game-box">
+                        <img src="../Images/COD warzone banner.jpg" alt="COD warzone">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">COD warzone</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ Free</h3>
+                                    <p class="description">Drop in. Loot. Battle to win!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only -> Strong Violence, Intense Action</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Fc 25" class="game-box">
+                        <img src="../Images/FC 25 banner.jpg" alt="Fc 25">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Fc 25</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 3,999</h3>
+                                    <p class="description">Feel the thrill of football!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 3+ only -> General</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="dead by daylight" class="game-box">
+                        <img src="../Images/Dead by daylight banner.jpg" alt="dead by daylight">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Dead by daylight</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 1,159</h3>
+                                    <p class="description">Run. Hide. Survive the night!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only -> Strong Horror, Violence, Blood</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Fortnite" class="game-box">
+                        <img src="../Images/Fornite banner.jpg" alt="Fortnite">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Fortnite</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 1,000</h3>
+                                    <p class="description">Build, Battle, and Be Legendary!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 12+ only -> Violence, Online Interactions</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Elden ring" class="game-box">
+                        <img src="../Images/Elden ring banner.jpg" alt="Elden ring">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Elden ring</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 5,299</h3>
+                                    <p class="description">Forge your fate in darkness!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 16+ only -> Fantasy Violence, Mild Blood</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Hitman" class="game-box">
+                        <img src="../Images/Hitman banner.jpg" alt="Hitman">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Hitman</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 2,509</h3>
+                                    <p class="description">Every move is an execution!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only ->Violence, Blood, Stealth Action</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="Warewolf" class="game-box">
+                        <img src="../Images/Warewolf banner.jpg" alt="Warewolf">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">Warewolf: The Apocolypse</h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">₹ 1,099</h3>
+                                    <p class="description">Embrace the beast within!</p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>For: 18+ only -> Violence, Blood, Mature Themes</p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy  </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+           
+        </div>
+    </main>
+    <footer>
+        <pre>
+            © 2025, Ace-Up, Inc. All rights reserved. Ace-Up,The Ace-UP logo, Valorant, the Valorant logo, Unreal, Unreal Engine, the Unreal Engine logo, Unreal
+            Tournament, and the Unreal Tournament logo are trademarks or registered trademarks of Ace-Up, Inc. in the India and elsewhere. Othe
+            brands or product names are the trademarks of their respective owners.
+            Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Ace-Up has no control
+            over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.
+        </pre>
+    </footer>
+    <script src="app.js"></script>
+</body>
