@@ -1,0 +1,63 @@
+<div id="main-content">
+    <div id="div-content">
+        <div id="block1">
+            <div id="game-display">
+                <p id="game-na"> Valorant</p>
+                <p id="game-pr">Play for Free</p>
+            </div>
+            <!-- i have to show this box when no games are available after filtering -->
+            <div id="no-game">
+                <h2>Sorry we have no such Games of your Type</h2>
+            </div>
+            <div id="top-games">
+                <div id="game1" class="g">
+                    <div class="ban">
+                        <a href="./specific/index.html"><img src="images/Valorant banner.jpg" alt="Valorant"></a>
+                    </div>
+                    Valorant
+                </div>
+                <div id="game2" class="g">
+                    <div class="ban">
+                        <a href="http://localhost:3000/1"><img src="images/FS25 banner.jpg" alt="FS25"></a>
+                    </div>
+                    Farm Simulator 25
+                </div>
+                <div id="game3" class="g">
+                    <div class="ban">
+                        <a href="http://localhost:3000/2"><img src="images/COD MW 3 banner.jpg" alt="COD MW 3"></a>
+                    </div>
+                    COD mordern warfare 3
+                </div>
+                <div id="game4" class="g">
+                    <div class="ban">
+                        <a href="http://localhost:3000/3"><img src="images/PUBG banner.jpg" alt="PUBG"></a>
+                    </div>
+                    PUBG
+                </div>
+                <div id="game5" class="g">
+                    <div class="ban">
+                        <a href="http://localhost:3000/4"><img src="images/Gran Turismo 7 banner.jpg" alt="FS25"></a>
+                    </div>
+                    Gran Turismo 7
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="row1">
+        <% gdata.forEach(game=> { %>
+            <div class="gg" id="ACV">
+                <div>
+                    <a href=""><img src="<%= game.banner %>" alt="<%= game.name %>"></a>
+                </div>
+                <p>base game</p>
+                <h3>
+                    <%= game.name %>
+                </h3>
+                <span>
+                    <%= game.price %>
+                </span>
+            </div>
+            <% }) %>
+    </div>
+
+</div>

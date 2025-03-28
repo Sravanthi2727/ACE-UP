@@ -1,0 +1,502 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Georgia"Times New Roman", Times, serif;
+}
+
+body {
+  background-color: #121212;
+  
+}
+
+/* Navbar Styling */
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background-color: #1e1e1e;
+  color: white;
+  z-index: 1000;
+
+  a {
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  h1 {
+    font-family: "Curlz MT";
+    background: linear-gradient(#ff9900,#1db954);
+    color: transparent;
+    background-clip: text;
+    font-size: xxx-large;
+    text-shadow:
+      2px 2px 5px #1db954,
+      4px 4px 5px #ff00ff;
+
+  }
+
+  h1:hover {
+    cursor: pointer;
+
+  }
+}
+
+/* Logo Styling */
+#logo {
+  width: 60px;
+  height: 60px;
+  margin-left: 1em;
+  border-radius: 50%;
+  background-image: url("/images/Ace\ Up.jpg");
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.2);
+}
+
+/* Navbar Buttons Container */
+#con {
+  display: flex;
+  justify-content: space-around;
+  width: 35%;
+}
+
+/* Navbar Buttons */
+.nav {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+}
+
+.nav button {
+  width: 92%;
+  height: 92%;
+  font-size: x-large;
+  color: white;
+  background-color: #333;
+  border-radius: 5px;
+  transition: width 0.5s, height 0.5s;
+  border: none;
+}
+
+.nav button:hover {
+  cursor: pointer;
+  background: linear-gradient(#0a66c2, #1db954);
+  width: 100%;
+  height: 100%;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  width: 150px;
+  height: 46px;
+  background-color: #333;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  transition: transform 0.3s ease-in-out, background-color 0.3s;
+  position: relative;
+  top: 1.5px;
+}
+
+.profile:hover {
+  background: linear-gradient(#0a66c2, #1db954);
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+#shop {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  height: 100%;
+  padding: 6vh 2em;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+}
+
+/* Sidebar Buttons */
+.cem {
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 50px;
+  margin-top: 1em;
+
+  a {
+    text-decoration: none;
+    font-family:  monospace;
+    color: white;
+    font-size: large;
+    transition: font-size 1s;
+  }
+
+  a:hover {
+    background: linear-gradient(#ff9900,#1db954);
+    color: transparent;
+    background-clip: text;
+    font-size: x-large;
+  }
+}
+
+#symbol {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding: 1em;
+  font-size: x-large;
+  height: 20%;
+}
+
+#youtube {
+  transition: font-size 1s;
+}
+
+#youtube:hover {
+  color: red;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+
+#facebook {
+  transition: font-size 1s;
+}
+
+#facebook:hover {
+  color: #1877f2;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+
+#linkedin {
+  transition: font-size 1s;
+}
+
+#linkedin:hover {
+  color: #0a66c2;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+
+#github {
+  transition: font-size 1s;
+}
+
+#github:hover {
+  color: #6e5494;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+
+#twitter {
+  transition: font-size 1s;
+}
+
+#twitter:hover {
+  color: #1da1f2;
+  font-size: xxx-large;
+  cursor: pointer;
+}
+
+#no-game {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 2em;
+  margin-top: 10vh;
+  display: none;
+}
+
+/* Main Content Styling */
+#main-content {
+  width: 100%;
+  padding-top: 14vh;
+  padding-left: 28vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+/* Game Display Section */
+#block1 {
+  display: flex;
+  flex-direction: row;
+}
+
+#popup-login,#popup-signup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color:transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  visibility: hidden;
+  z-index: 2000;
+
+  .login-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+  }
+
+  .login-box {
+    background-color: #222;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    text-align: center;
+    width: 380px;
+    max-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    transform: scale(0.1);
+    transition: transform 2s;
+
+  }
+  .login-box a{
+    color: #0a66c2; 
+    font-weight: bolder;
+  }
+  .login-box a:hover{
+    cursor: pointer;
+  }
+
+  /* Heading */
+  .login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #00ffe1; 
+    text-shadow: 0 0 10px #00ffe1;
+  }
+
+  /* Input Group */
+  .input-group {
+    text-align: left;
+    margin-bottom: 15px;
+  }
+
+  .input-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .input-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #444;
+    background-color: #333;
+    color: white;
+    border-radius: 6px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+  }
+
+  /* Input Focus */
+  .input-group input:focus {
+    border-color: #1db954;
+    box-shadow: 0 0 5px rgba(29, 185, 84, 0.5);
+  }
+
+  /* Button */
+  #login-submit ,#login-submiit{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #1db954;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+    opacity: 0.5;
+  }
+
+  /* Button Hover Effect */
+  #submit:hover {
+    background: linear-gradient(#0a66c2, #1db954);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 400px) {
+    .login-box {
+      width: 90%;
+      padding: 20px;
+    }
+  }
+}
+
+#game-display {
+  width: 70%;
+  height: 500px;
+  margin-top: 1em;
+  margin-left: 2em;
+  border-radius: 7px;
+  color: white;
+  transition: width 0.5s, height 0.5s, background-image 2s;
+  background-image: url("/images/Valorant home.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  gap: 5%;
+  padding: 1em;
+
+  p {
+    font-size: x-large;
+    font-weight: bold;
+  }
+}
+
+#game-display:hover {
+  cursor: pointer;
+  width: 75%;
+  height: 550px;
+}
+
+/* Top Games Sidebar */
+#top-games {
+  width: 20%;
+  height: 500px;
+  margin-left: 1em;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.g {
+  position: relative;
+  background-color: #121212;
+  border-radius: 7px;
+  width: 90%;
+  height: 20%;
+  margin: 1em;
+  padding-left: 1em;
+  display: flex;
+  align-items: center;
+  color: white;
+  box-shadow: 1px 2px 3px rgba(255, 255, 255, 0.75);
+  transition: width 0.5s, height 0.5s, opacity 0.5s;
+  display: flex;
+  gap: 2%;
+  align-items: center;
+
+  .ban {
+    height: 90%;
+    width: 30%;
+
+    img {
+      border-radius: 3px;
+      height: 100%;
+      width: 60%;
+    }
+  }
+}
+
+.g:hover {
+  cursor: pointer;
+  color: white;
+  width: 95%;
+  height: 30%;
+  box-shadow: 0px 8px 20px #FF7300;
+
+}
+
+#row1 {
+  width: 91%;
+  margin: 2em;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* background-color: chocolate; */
+}
+
+.gg {
+  width: 17%;
+  height: 400px;
+  margin: 2em;
+  border-radius: 10px;
+  background-color: #1e1e1e;
+  transition: all 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.initial-hidden {
+  display: none;
+}
+
+.gg div {
+  width: 100%;
+  height: 75%;
+  border-radius: 10px 10px 0 0;
+  overflow: hidden;
+}
+
+.gg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gg:hover img {
+  transform: scale(1.1);
+}
+
+.gg p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #bbb;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.gg h3 {
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.gg span {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1db954;
+  padding-bottom: 10px;
+}
+
+.gg:hover {
+  cursor: pointer;
+  width: 20%;
+  height: 450px;
+  opacity: 0.75;
+  box-shadow: 0 0 20px #FF7300;
+}
+

@@ -1,0 +1,59 @@
+<div id="main-content">
+    <h1>My Cart</h1>
+    <div class="display-cart-game">
+        <% let cart_item=0; let cart_cash=0 %>
+
+            <% if(user.carted.length>0){ %>
+                <% user.carted.forEach(game=> { %>
+                    <div class="game-box">
+                        <img src="<%=  game.banner%>" alt="Valorant">
+                        <div class="game-info">
+                            <div class="row-1">
+                                <div class="col-1">
+                                    <button>Base Game</button>
+                                    <h3 class="game-name">
+                                        <%= game.name %>
+                                    </h3>
+                                </div>
+                                <div class="col-2">
+                                    <h3 class="price">
+                                        <%= game.price %>
+                                    </h3>
+                                    <p class="description">
+                                        <%= game.desc %>
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="colm-1">
+                                    <p>
+                                        <%= game.warn %>
+                                    </p>
+                                    <p style="color:yellow;">May include in-Game Purchase</p>
+                                </div>
+                                <div class="colm-2">
+                                    <button class="remove-btn">Remove</button>
+                                    <button class="buy-btn"><i class="fa-solid fa-shop"></i> Buy </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <% game.price=game.price.replace(/₹|,/g, "" ) %>
+                        <% cart_item++; cart_cash+=parseInt(game.price) || 0 %>
+                            <% }) %>
+                            <% } %>
+                                <div class="cart-summary">
+                                    <% if (cart_item===0) { %>
+                                        <h2 class="cart-total-text">No items in the cart</h2>
+                                        <% }else{ %>
+                                            <h2 class="cart-total-text">No of Items are -><%= cart_item %>
+                                            </h2>
+                                            <% } %>
+                                                <h3>Total of your cart item is -> <b style="color:  #39ff14;">₹<%=
+                                                            cart_cash %></b>
+                                                </h3>
+                                </div>
+
+    </div>
+</div>

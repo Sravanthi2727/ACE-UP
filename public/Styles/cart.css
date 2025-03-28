@@ -1,0 +1,172 @@
+/* Main Content Styling */
+#main-content {
+    width: 100%;
+    padding-top: 14vh;
+    padding-left: 28vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    min-height: 100vh;
+  }
+  
+  #main-content h1 {
+    color: #ffffff;
+  }
+  
+  #display-cart-game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .game-box {
+    padding: 1em;
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    background-color: #444;
+    border-radius: 9px;
+    margin: 3em;
+  }
+  
+  .game-box img {
+    width: 130px;
+    height: 200px;
+    border-radius: 9px;
+    box-shadow: 0px 0px 10px 0px #c89b9b;
+  
+  }
+  
+  .game-box .game-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+  
+  }
+  
+  .row-1 {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    margin: 1em;
+  }
+  
+  .col-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1em;
+    button{
+        width: 90px;
+        height: 30px;
+        background-color: #6a6767;
+        color: white;
+        border: none;
+        border-radius: 5px;
+    }
+  }
+  .game-name{
+    font-size: x-large;
+    font-weight: bold;
+  }
+  
+  .col-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 1em;
+  
+  }
+  
+  .row-2 {
+    display: flex;
+    flex-direction: row;
+    height: 50%;
+    border-radius: 5px;
+    border: #6a6767 solid 0.5px;
+    padding: 1em;
+    box-shadow: 0px 0px 10px 0px #6a6767;
+  }
+  
+  .colm-1 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 1em;
+  }
+  
+  .colm-2 {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 2em;
+  
+   
+  }
+  .remove-btn {
+    width: 20%;
+    height: 60%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #ff0000;
+    color: white;
+    transition: transform 0.5s;
+  }
+  
+  .remove-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+  .buy-btn {
+    width: 20%;
+    height: 60%;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #1db954;
+    color: white;
+    transition: transform 0.5s;
+  }
+  .buy-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+  
+
+
+  .cart-summary {
+    background: linear-gradient(135deg, #2a2a2a, #1a1a1a);
+    border: 2px solid #39ff14; 
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    width: 80%;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: #ffffff;
+}
+
+.cart-summary .cart-total-text {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #00ffe1; 
+    text-shadow: 0 0 10px #00ffe1;
+}
+
+.cart-summary h3 {
+    font-size: 1.4em;
+    color: #ff073a; 
+    text-shadow: 0 0 8px #ff073a;
+}
