@@ -7,21 +7,36 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const default_user = async () => {
-    return await udata.findOne({ email: "deafault" });
+    return await udata.findOne({ email: "deafault" }).populate("carted");
+}
+const default_user_cart = async (cart) => {
+    return await udata.updateOne({ email: "deafault" },
+        { $set: { carted: cart } }
+    )
 }
 
-// Our Home Route
-route.get("/", async (req, res) => {
-    const game = await gdata.find();
-    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
-        let def_user = await default_user()
-        res.render("index", { gdata: game, user: def_user });
-    } else {;
-        const token = req.cookies.token;
-        const temp = jwt.verify(token, "secretkey");
-        let def_user = await udata.findOne({ email: temp.email });
-        res.render("index", { gdata: game, user: def_user });
+
+//login middelware:
+const login = async (req, res, next) => {
+    try {
+        if (!req.cookies.token || req.cookies.token === "") {
+            req.user = await default_user();
+        } else {
+            const token = req.cookies.token;
+            const decoded = jwt.verify(token, "secretkey");
+            req.user = await udata.findOne({ email: decoded.email }).populate("carted");
+        }
+    } catch (error) {
+        console.error("Authentication Error:", error);
+        req.user = await default_user();
     }
+    next();
+};
+
+// Our Home Route
+route.get("/", login, async (req, res) => {
+    const game = await gdata.find();
+    res.render("index", { gdata: game, user: req.user });
 })
 
 //Our signup or Account Creation route
@@ -42,7 +57,6 @@ route.post("/signup", async (req, res) => {
             // by providing cookies we are making him log in!
             let token = jwt.sign({ email }, "secretkey");
             res.cookie("token", token)
-            console.log("hello");
             res.redirect("/");
         }
     } catch (error) {
@@ -59,7 +73,6 @@ route.post("/login", async (req, res) => {
         // checking that user already exist or not
         const check = await udata.findOne({ email });
         if (check) {
-            console.log("exist");
             bcrypt.compare(req.body.password, check.password, (err, result) => {
                 if (err) {
                     console.error(err);
@@ -68,7 +81,6 @@ route.post("/login", async (req, res) => {
                 if (result) {
                     let token = jwt.sign({ email }, "secretkey");
                     res.cookie("token", token)
-                    console.log("hello");
                 } else {
                     return res.status(500).send("Error verifying password");
                 }
@@ -88,19 +100,31 @@ route.post("/login", async (req, res) => {
 
 
 //Our Cart Page Route
-route.get("/cart", async (req, res) => {
+route.get("/cart", login, async (req, res) => {
     const game = await gdata.find();
-    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
-        let def_user = await default_user()
-        res.render("cart", { gdata: game, user: def_user });
-    } else {
-        const token = req.cookies.token;
-        const temp = jwt.verify(token, "secretkey");
-        let def_user = await udata.findOne({ email: temp.email });
-        def_user = await udata.findOne({ email: temp.email }).populate("carted");
-        res.render("cart", { gdata: game, user: def_user });
-    }
+    res.render("cart", { gdata: game, user: req.user });
 })
 
+route.put("/cart", login, async (req, res) => {
+    res.json(req.user)
+})
+
+
+route.delete("/cart", async (req, res) => {
+    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+        let cart = req.body.carted;
+        default_user_cart(cart);
+    } else {
+        let cart = req.body.carted;
+        const token = req.cookies.token;
+        const temp = jwt.verify(token, "secretkey");
+        await udata.updateOne(
+            { email: temp.email },
+            { $set: { carted: cart } }
+        );
+
+    }
+    res.redirect("/");
+})
 
 module.exports = route

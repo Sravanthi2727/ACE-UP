@@ -8,7 +8,7 @@
 
 body {
   background-color: #121212;
-  
+
 }
 
 /* Navbar Styling */
@@ -33,7 +33,7 @@ body {
 
   h1 {
     font-family: "Curlz MT";
-    background: linear-gradient(#ff9900,#1db954);
+    background: linear-gradient(#ff9900, #1db954);
     color: transparent;
     background-clip: text;
     font-size: xxx-large;
@@ -138,14 +138,14 @@ body {
 
   a {
     text-decoration: none;
-    font-family:  monospace;
+    font-family: monospace;
     color: white;
     font-size: large;
     transition: font-size 1s;
   }
 
   a:hover {
-    background: linear-gradient(#ff9900,#1db954);
+    background: linear-gradient(#ff9900, #1db954);
     color: transparent;
     background-clip: text;
     font-size: x-large;
@@ -228,7 +228,7 @@ body {
   padding-left: 28vh;
   display: flex;
   flex-direction: column;
-  
+
 }
 
 /* Game Display Section */
@@ -237,13 +237,14 @@ body {
   flex-direction: row;
 }
 
-#popup-login,#popup-signup {
+#popup-login,
+#popup-signup {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color:transparent;
+  background-color: transparent;
   position: fixed;
   top: 0;
   left: 0;
@@ -273,11 +274,13 @@ body {
     transition: transform 2s;
 
   }
-  .login-box a{
-    color: #0a66c2; 
+
+  .login-box a {
+    color: #0a66c2;
     font-weight: bolder;
   }
-  .login-box a:hover{
+
+  .login-box a:hover {
     cursor: pointer;
   }
 
@@ -285,7 +288,7 @@ body {
   .login-box h2 {
     margin-bottom: 20px;
     font-size: 24px;
-    color: #00ffe1; 
+    color: #00ffe1;
     text-shadow: 0 0 10px #00ffe1;
   }
 
@@ -320,7 +323,8 @@ body {
   }
 
   /* Button */
-  #login-submit ,#login-submiit{
+  #login-submit,
+  #login-submiit {
     width: 100%;
     padding: 12px;
     font-size: 16px;
@@ -360,6 +364,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: end;
+  align-items: start;
   gap: 5%;
   padding: 1em;
 
@@ -499,4 +504,3 @@ body {
   opacity: 0.75;
   box-shadow: 0 0 20px #FF7300;
 }
-
