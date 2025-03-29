@@ -101,8 +101,7 @@ route.post("/login", async (req, res) => {
 
 //Our Cart Page Route
 route.get("/cart", login, async (req, res) => {
-    const game = await gdata.find();
-    res.render("cart", { gdata: game, user: req.user });
+    res.render("cart", { user: req.user });
 })
 
 route.put("/cart", login, async (req, res) => {
@@ -130,8 +129,7 @@ route.delete("/cart", async (req, res) => {
 
 //helpline page route;
 route.get("/helpline", login, async (req, res) => {
-    const game = await gdata.find();
-    res.render("helpline", { gdata: game, user: req.user });
+    res.render("helpline", { user: req.user });
 })
 
 
