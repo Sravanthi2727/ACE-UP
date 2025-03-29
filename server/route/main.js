@@ -127,4 +127,12 @@ route.delete("/cart", async (req, res) => {
     res.redirect("/");
 })
 
+
+//helpline page route;
+route.get("/helpline", login, async (req, res) => {
+    const game = await gdata.find();
+    res.render("helpline", { gdata: game, user: req.user });
+})
+
+
 module.exports = route
