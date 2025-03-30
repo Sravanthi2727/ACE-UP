@@ -1,0 +1,294 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 1em;
+    border-radius: 50%;
+    background-image: url("../Images/Ace Up.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.2);
+  }
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 9em;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: white;
+    z-index: 1000;
+  
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  
+    h1 {
+      font-family: "Curlz MT";
+      font-size: xx-large;
+      transition: font-size 1s;
+    }
+  
+    h1:hover {
+      cursor: pointer;
+      color: #1db954;
+      font-size: xxx-large;
+    }
+  }
+  .heading{
+    color: #FF7300; /* Neon Orange */
+    text-shadow: 0 0 10px #1db954 ;
+}
+
+footer {
+    background: rgba(24, 24, 24, 0.95);
+    padding: 10px;
+}
+#shop {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    padding: 6vh 2em;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  
+  /* Sidebar Buttons */
+  .cem {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    margin-top: 1em;
+  
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: large;
+      transition: font-size 1s;
+    }
+  
+    a:hover {
+      color: #1db954;
+      font-size: x-large;
+    }
+  }
+  
+  #symbol {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    margin-right: 2em;
+    font-size: x-large;
+    height: 20%;
+  }
+  
+  #youtube {
+    transition: font-size 1s;
+  }
+  
+  #youtube:hover {
+    color: red;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #facebook {
+    transition: font-size 1s;
+  }
+  
+  #facebook:hover {
+    color: #1877f2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #linkedin {
+    transition: font-size 1s;
+  }
+  
+  #linkedin:hover {
+    color: #0a66c2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #github {
+    transition: font-size 1s;
+  }
+  
+  #github:hover {
+    color: #6e5494;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #twitter {
+    transition: font-size 1s;
+  }
+  
+  #twitter:hover {
+    color: #1da1f2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+main{
+    width: 72vw;
+    padding-top: 14vh;
+    margin-left: 28vh;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 70%;
+  margin: 10vh auto 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  perspective: 1200px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  width: 300px;
+  height: 400px;
+  opacity: 0.4;
+  transform: scale(0.8);
+  transition: all 0.5s ease;
+  background-color: #1e1e1e;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  padding: 1em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.card img {
+  width: 100%;
+  height: 70%;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+/* Positioning when selected */
+#game1:checked ~ .carousel .card1 {
+  transform: translateX(0) scale(1.2);
+  opacity: 1;
+  z-index: 3;
+}
+#game1:checked ~ .carousel .card2 {
+  transform: translateX(320px) scale(0.9);
+  z-index: 2;
+}
+#game1:checked ~ .carousel .card3 {
+  transform: translateX(-320px) scale(0.9);
+  z-index: 2;
+}
+
+#game2:checked ~ .carousel .card2 {
+  transform: translateX(0) scale(1.2);
+  opacity: 1;
+  z-index: 3;
+}
+#game2:checked ~ .carousel .card3 {
+  transform: translateX(320px) scale(0.9);
+  z-index: 2;
+}
+#game2:checked ~ .carousel .card1 {
+  transform: translateX(-320px) scale(0.9);
+  z-index: 2;
+}
+
+#game3:checked ~ .carousel .card3 {
+  transform: translateX(0) scale(1.2);
+  opacity: 1;
+  z-index: 3;
+}
+#game3:checked ~ .carousel .card1 {
+  transform: translateX(320px) scale(0.9);
+  z-index: 2;
+}
+#game3:checked ~ .carousel .card2 {
+  transform: translateX(-320px) scale(0.9);
+  z-index: 2;
+}
+
+.percentage {
+  position: absolute;
+  bottom: 30px;
+  right: 10px;
+  background-color: #1db954;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 0 10px #1db954;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .percentage {
+  transform: scale(1.1);
+}
+
+.progress-label {
+  position: absolute;
+  bottom: 1px;
+  right: 11px;
+  color: #ccc;
+  font-size: 0.70rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+footer {
+    background: rgba(24, 24, 24, 0.95);
+    padding: 10px;
+}
+
