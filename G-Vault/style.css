@@ -1,0 +1,232 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    background-color: #121212;
+    text-align: center;
+    background-size: 400% 400%;
+    animation: gradientBG 10s ease infinite;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+    margin-left: 1em;
+    border-radius: 50%;
+    background-image: url("../Images/Ace Up.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.2);
+  }
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    gap: 9em;
+    padding: 1rem;
+    background-color: #1e1e1e;
+    color: white;
+    z-index: 1000;
+  
+    a {
+      color: #ffffff;
+      text-decoration: none;
+    }
+  
+    h1 {
+      font-family: "Curlz MT";
+      font-size: xx-large;
+      transition: font-size 1s;
+    }
+  
+    h1:hover {
+      cursor: pointer;
+      color: #1db954;
+      font-size: xxx-large;
+    }
+  }
+  .heading{
+    color: #FF7300; /* Neon Orange */
+    text-shadow: 0 0 10px #1db954 ;
+}
+
+footer {
+    background: rgba(24, 24, 24, 0.95);
+    padding: 10px;
+}
+#shop {
+    position: fixed;
+    top: 80px;
+    left: 0;
+    height: 100%;
+    padding: 6vh 2em;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  
+  /* Sidebar Buttons */
+  .cem {
+    display: flex;
+    align-items: center;
+    width: 150px;
+    height: 50px;
+    margin-top: 1em;
+  
+    a {
+      text-decoration: none;
+      color: white;
+      font-size: large;
+      transition: font-size 1s;
+    }
+  
+    a:hover {
+      color: #1db954;
+      font-size: x-large;
+    }
+  }
+  
+  #symbol {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+    padding: 1em;
+    margin-right: 2em;
+    font-size: x-large;
+    height: 20%;
+  }
+  
+  #youtube {
+    transition: font-size 1s;
+  }
+  
+  #youtube:hover {
+    color: red;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #facebook {
+    transition: font-size 1s;
+  }
+  
+  #facebook:hover {
+    color: #1877f2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #linkedin {
+    transition: font-size 1s;
+  }
+  
+  #linkedin:hover {
+    color: #0a66c2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #github {
+    transition: font-size 1s;
+  }
+  
+  #github:hover {
+    color: #6e5494;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+  
+  #twitter {
+    transition: font-size 1s;
+  }
+  
+  #twitter:hover {
+    color: #1da1f2;
+    font-size: xxx-large;
+    cursor: pointer;
+  }
+main{
+    width: 72vw;
+    padding-top: 14vh;
+    margin-left: 28vh;
+    padding-bottom: 200px; 
+}
+.g-vault-container {
+    margin-top: 100px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .games-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .game-box {
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+    transition: transform 0.3s ease;
+  }
+  
+  .game-box:hover {
+    transform: scale(1.05);
+  }
+  
+  .game-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .game-details h4 {
+    margin: 0.5rem 0 0.2rem;
+    color: #1db954;
+  }
+  
+  .game-details p {
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .install-btn {
+    margin-top: 1rem;
+    padding: 0.5rem 1.2rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+    background-color: #1db954;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .install-btn:hover {
+    background-color: #17a54a;
+  }
+  
+footer {
+  background: rgba(24, 24, 24, 0.95);
+  padding: 10px;
+  
+}
