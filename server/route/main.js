@@ -1,4 +1,4 @@
-
+const mongoose = require("mongoose")
 const express = require("express");
 const route = express.Router();
 const gdata = require("../model/gamedata");
@@ -15,6 +15,18 @@ const default_user_cart = async (cart) => {
     )
 }
 
+const default_user_gcash = async (cash) => {
+    return await udata.updateOne({ email: "deafault" },
+        { $set: { gcash: cash } }
+    )
+}
+
+const default_user_vault = async (gid) => {
+    return await udata.updateOne({ email: "deafault" },
+        { $push: { vaulted: gid } }
+    )
+}
+
 
 //login middelware:
 const login = async (req, res, next) => {
@@ -24,7 +36,11 @@ const login = async (req, res, next) => {
         } else {
             const token = req.cookies.token;
             const decoded = jwt.verify(token, "secretkey");
-            req.user = await udata.findOne({ email: decoded.email }).populate("carted");
+            req.user = await udata.findOne({ email: decoded.email })
+                .populate({
+                    path: "carted",
+                    model: "GAME_DATA"
+                });
         }
     } catch (error) {
         console.error("Authentication Error:", error);
@@ -46,7 +62,6 @@ route.post("/signup", async (req, res) => {
         // checking that user already exist or not
         const check = await udata.findOne({ email });
         if (check) {
-            console.log("exist");
             res.redirect("/");
         } else {
             // providing more sequrity to it's password!
@@ -88,7 +103,6 @@ route.post("/login", async (req, res) => {
             })
 
         } else {
-            console.log("something is wrong")
             res.redirect("/");
 
         }
@@ -105,7 +119,7 @@ route.get("/cart", login, async (req, res) => {
 })
 
 route.put("/cart", login, async (req, res) => {
-    res.json(req.user)
+    res.json(req.user);
 })
 
 
@@ -123,10 +137,46 @@ route.delete("/cart", async (req, res) => {
         );
 
     }
-    console.log("helloooo")
     res.json({ redirect: "/cart" });
 })
 
+
+//gvault page route
+route.put("/gvault", async (req, res) => {
+    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+        let gid = req.body.gid;
+        gid = new mongoose.Types.ObjectId(gid);
+        default_user_vault(gid);
+    } else {
+        let gid = req.body.gid;
+        gid = new mongoose.Types.ObjectId(gid);
+        const token = req.cookies.token;
+        const temp = jwt.verify(token, "secretkey");
+        await udata.updateOne(
+            { email: temp.email },
+            { $push: { vaulted: gid } }
+        );
+
+    }
+})
+
+
+//route for cutting gcash
+route.put("/gcash", async (req, res) => {
+    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+        let cash = req.body.gcash;
+        default_user_gcash(cash);
+    } else {
+        let cash = req.body.gcash;
+        const token = req.cookies.token;
+        const temp = jwt.verify(token, "secretkey");
+        await udata.updateOne(
+            { email: temp.email },
+            { $set: { gcash: cash } }
+        );
+
+    }
+})
 
 //helpline page route;
 route.get("/helpline", login, async (req, res) => {
@@ -134,4 +184,4 @@ route.get("/helpline", login, async (req, res) => {
 })
 
 
-module.exports = route
+module.exports = route     
