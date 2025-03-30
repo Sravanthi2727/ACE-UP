@@ -224,7 +224,7 @@ body {
 /* Main Content Styling */
 #main-content {
   width: 100%;
-  padding-top: 14vh;
+  padding-top: 10vh;
   padding-left: 28vh;
   display: flex;
   flex-direction: column;

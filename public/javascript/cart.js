@@ -22,6 +22,11 @@ const modify_cart = async (cart) => {
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ carted: cart })
         });
+        const data = await response.json();
+        if (data.redirect) {
+            // Now redirect the browser
+            window.location.href = data.redirect;
+        }
 
     } catch (error) {
         console.error("Error:", error);

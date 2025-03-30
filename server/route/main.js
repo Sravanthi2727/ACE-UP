@@ -123,7 +123,8 @@ route.delete("/cart", async (req, res) => {
         );
 
     }
-    res.redirect("/");
+    console.log("helloooo")
+    res.json({ redirect: "/cart" });
 })
 
 

@@ -1,6 +1,6 @@
 #main-content-helpline{
     width: 100%;
-    padding-top: 14vh;
+    padding-top: 10vh;
     padding-left: 28vh;
     display: flex;
     justify-content: center;
@@ -46,6 +46,7 @@ header {
 
 .categories h2 {
     font-size: 26px;
+    color: white;
     text-shadow: 0 0 10px #FF7300, 0 0 20px #FF4500, 0 0 40px #FF7300;
 }
 
@@ -83,6 +84,7 @@ header {
 
 /* Game Cards */
 .explore-games{
+    color: white;
   text-shadow: 0 0 10px #FF7300, 0 0 20px #FF4500, 0 0 40px #FF7300;
 
 }
