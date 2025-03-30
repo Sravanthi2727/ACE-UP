@@ -1,0 +1,16 @@
+<div class="main-content-gvault">
+    <h3>Your Purchased Games</h3>
+
+    <div class="vault">
+        <% user.vaulted.forEach(game=> { %>
+            <div class="vault-item">
+                <img src="<%= game.banner %>" alt="<%= game.name %>">
+                <div class="game_details">
+                    <h4><%= game.name %></h4>
+                    <p><%= game.dialouge %></p> <!-- Fixed spelling -->
+                    <button class="install-btn">Install</button>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</div>

@@ -130,7 +130,6 @@
   "rating": 4,
   "smalldes": "Farming Simulator 25 lets you build and manage your dream farm, cultivate crops, raise livestock, and operate a variety of realistic farming machinery.",
   "largedes": "<p><b style=\"color: #1DB954;\">BUILD YOUR AGRICULTURAL EMPIRE</b> :- Manage your farm with cutting-edge machinery, cultivate crops, and take care of livestock. Expand your fields and maximize your yields in a dynamic, evolving world.</p><p><b style=\"color: #1DB954;\">FARM WITH FREEDOM & PRECISION</b> :- Customize your farm, collaborate in multiplayer, and experience realistic farming simulation with the latest vehicles and equipment. Every decision shapes your success.</p>",
-  "dialogue": "🚜 BUILD YOUR FARM, GROW YOUR EMPIRE",
   "genre": [
     "Sports",
     "Simulation"
@@ -155,7 +154,8 @@
     "RAM": "16 GB"
   },
   "desc": "Build. Harvest. Expand your farm!",
-  "warn": "For: 3+ only -> General"
+  "warn": "For: 3+ only -> General",
+  "dialouge": "🚜 BUILD YOUR FARM, GROW YOUR EMPIRE"
 },
 {
   "_id": {
@@ -169,7 +169,6 @@
   "rating": 5,
   "smalldes": "A realistic racing simulation featuring meticulously detailed cars and tracks. Compete in stunning visuals with precise driving mechanics, tuning options, and online racing challenges.",
   "largedes": "<p><b style=\"color: #1DB954;\">EXPERIENCE RACING PERFECTION</b> :- Push the limits of speed with ultra-realistic car physics, stunning tracks, and precision driving in the most refined racing simulator ever made.</p><p><b style=\"color: #1DB954;\">MASTER EVERY TURN, OWN EVERY TRACK</b> :- From iconic circuits to high-speed city races, feel the rush of real motorsport with unmatched realism and competitive challenges.</p>",
-  "dialogue": "🏎️ RACE BEYOND LIMITS",
   "genre": [
     "Sports",
     "Racing",
@@ -195,7 +194,8 @@
     "RAM": "PlayStation"
   },
   "desc": "The road is my battlefield, and speed is my sword!",
-  "warn": "For Adrenaline Junkies Only → Extreme Speed, High-Octane Action!"
+  "warn": "For Adrenaline Junkies Only → Extreme Speed, High-Octane Action!",
+  "dialouge": "🏎️ RACE BEYOND LIMITS"
 },
 {
   "_id": {
@@ -209,7 +209,6 @@
   "rating": 4.5,
   "smalldes": "Step into the shoes of Agent 47, a professional assassin, and execute high-profile targets across breathtaking locations. Use disguises, stealth, and creative strategies to eliminate foes.",
   "largedes": "<p><b style=\"color: #1DB954;\">SILENCE IS YOUR DEADLIEST WEAPON</b> :- Step into the shoes of Agent 47 and execute high-stakes assassinations in breathtaking locations across the globe.</p><p><b style=\"color: #1DB954;\">PLAN, EXECUTE, DISAPPEAR</b> :- Every target has multiple approaches—be creative, stay undetected, and eliminate your enemies with precision.</p>",
-  "dialogue": "🕶️ SILENCE. PRECISION. PERFECTION.",
   "genre": [
     "Strategy",
     "Adventure",
@@ -235,7 +234,8 @@
     "RAM": "16 GB"
   },
   "desc": "Every move is an execution!",
-  "warn": "For: 18+ only ->Violence, Blood, Stealth Action"
+  "warn": "For: 18+ only ->Violence, Blood, Stealth Action",
+  "dialouge": "🕵️‍♂️SILENCE. PRECISION. PERFECTION."
 },
 {
   "_id": {
@@ -249,7 +249,6 @@
   "rating": 4.5,
   "smalldes": "A battle royale shooter where 100 players drop onto an island, scavenge for weapons, and fight to be the last one standing.",
   "largedes": "<p><b style=\"color: #1DB954;\">SURVIVE, LOOT, CONQUER</b> :- Drop into a massive battleground where survival is the only rule. Scavenge weapons, plan your strategy, and be the last one standing.</p><p><b style=\"color: #1DB954;\">EVERY DECISION COUNTS</b> :- Whether you go in guns blazing or take a stealthy approach, every match is unpredictable. Adapt, strategize, and claim that Chicken Dinner.</p>",
-  "dialogue": "🎯 DROP IN, LOOT UP, SURVIVE",
   "genre": [
     "FPS",
     "Battle Royale",
@@ -275,7 +274,8 @@
     "RAM": "16 GB"
   },
   "desc": "Survive. Shoot. Be the last!",
-  "warn": "16+ only -> Moderate Violence, Online Interactions"
+  "warn": "16+ only -> Moderate Violence, Online Interactions",
+  "dialouge": "🎯 DROP IN, LOOT UP, SURVIVE"
 },
 {
   "_id": {
@@ -289,7 +289,6 @@
   "rating": 4.5,
   "smalldes": "VALORANT is a character-based 5v5 tactical shooter set on the global stage. Outwit, outplay, and outshine your competition with tactical abilities, precise gunplay, and adaptive teamwork.",
   "largedes": "<p><b style=\"color: #1DB954;\">FIGHT AROUND THE WORLD</b> :- Blend your style and experience on a global, competitive stage. Attack and defend your side using sharp gunplay and tactical abilities. And, with one life per round, you'll have to think faster than your opponent if you want to survive.</p><p><b style=\"color: #1DB954;\">CREATIVITY IS YOUR GREATEST WEAPON</b> :- More than guns and bullets, you will choose an Agent armed with adaptive, swift, and lethal abilities that create opportunities to let your gunplay shine. Each map is purpose-built for team strategies, spectacular plays, and clutch moments. Make the plays others will imitate for years to come.</p>",
-  "dialogue": "🎯 DEFY THE LIMITS FOR FREE IN VALORANT",
   "genre": [
     "FPS",
     "Strategy"
@@ -314,7 +313,8 @@
     "RAM": "8GB"
   },
   "desc": "Precision, strategy, victory awaits.",
-  "warn": "For: 12 + only  -> Moderate Violence"
+  "warn": "For: 12 + only  -> Moderate Violence",
+  "dialouge": "🎯 DEFY THE LIMITS FOR FREE IN VALORANT"
 },
 {
   "_id": {
@@ -328,7 +328,6 @@
   "rating": 2,
   "smalldes": "An action RPG set in the World of Darkness universe. Play as a werewolf fighting against an evil corporation, using brute strength, stealth, and supernatural abilities.",
   "largedes": "<p><b style=\"color: #1DB954;\">UNLEASH THE BEAST WITHIN</b> :- Transform into a ferocious werewolf and battle against dark forces threatening the world. Embrace your rage and let your fury guide you.</p><p><b style=\"color: #1DB954;\">CHOOSE YOUR PATH, SHAPE YOUR DESTINY</b> :- Balance between human intellect and primal savagery as you fight for nature against corrupt corporations and supernatural threats.</p>",
-  "dialogue": "🐺 EMBRACE THE BEAST WITHIN",
   "genre": [
     "RPG",
     "Horror",
@@ -354,7 +353,8 @@
     "RAM": "8 GB"
   },
   "desc": "Embrace the beast within!",
-  "warn": "For: 18+ only -> Violence, Blood, Mature Themes"
+  "warn": "For: 18+ only -> Violence, Blood, Mature Themes",
+  "dialouge": "🐺 EMBRACE THE BEAST WITHIN"
 },
 {
   "_id": {
@@ -368,7 +368,6 @@
   "rating": 4,
   "smalldes": "Step into the boots of Eivor, a Viking warrior,and conquer England through raids, diplomacy, and epic battles.Explore a vast open world with rich storytelling and RPG elements.",
   "largedes": "<p><b style=\"color: #1DB954;\">BECOME A LEGENDARY VIKING</b> :- Raid, conquer, and carve your destiny in a rich open world set in the Dark Ages. Build your clan’s settlement and write your own saga.</p> <p><b style=\"color: #1DB954;\">STRATEGY, STEALTH, AND BRUTAL COMBAT</b> :- Utilize tactical combat, master the art of assassination, and shape history with choices that define your Viking journey.</p>",
-  "dialouge": "⚔️ WRITE YOUR OWN VIKING SAGA",
   "genre": "Adventure, RPG",
   "developer": "Ubisoft",
   "desc": "Live like a Viking warrior!",
@@ -390,7 +389,8 @@
     "gpu": "NVIDIA RTX 2080 / AMD Radeon RX 5700XT",
     "os": "Windows 10/11 (64-bit)",
     "RAM": "16 GB"
-  }
+  },
+  " dialouge": "⚔️ WRITE YOUR OWN VIKING SAGA"
 },
 {
   "_id": {
@@ -404,7 +404,6 @@
   "rating": 4.5,
   "smalldes": "A fast-paced first-person shooter with intense...",
   "largedes": "<p><b style=\"color: #1DB954;\">NO ROOM FOR HESITATION</b> :- Engage in intense, fast-paced combat where every shot counts. Master modern weaponry and outmaneuver your enemies in high-stakes battles.</p><p><b style=\"color: #1DB954;\">TACTICAL WARFARE REDEFINED</b> :- Play through gripping single-player campaigns, test your skills in multiplayer, and dominate in adrenaline-fueled battles across legendary maps.</p>",
-  "dialouge": "🔥 WAR DOESN’T WAIT. NEITHER SHOULD YOU",
   "genre": [
     "FPS",
     "Strategy"
@@ -429,7 +428,8 @@
     "gpu": "NVIDIA RTX 3060 Ti / AMD Radeon RX 6600XT",
     "os": "Windows 10/11 (64-bit)",
     "RAM": "16 GB"
-  }
+  },
+  " dialouge": "🔥 WAR DOESN’T WAIT. NEITHER SHOULD YOU"
 },
 {
   "_id": {
@@ -443,7 +443,6 @@
   "rating": 3.8,
   "smalldes": "A free-to-play battle royale shooter where players drop into a massive open-world battlefield. Survive against opponents using tactical combat, vehicles, and team-based strategies.",
   "largedes": "<p><b style=\"color: #1DB954;\">NO SECOND CHANCES, NO MERCY</b> :- Drop into a massive warzone where strategy and reflexes determine survival. Loot, fight, and outlast your enemies in epic battle royale encounters.</p><p> <b style=\"color: #1DB954;\">ADAPT TO EVERY SITUATION</b> :- From sniping in open fields to close-quarters gunfights, every moment demands precision. Team up, strategize, and claim victory.</p>",
-  "dialouge": "💣 NO SECOND CHANCES. BATTLE TO THE END",
   "genre": [
     "FPS",
     "Strategy"
@@ -468,7 +467,8 @@
     "gpu": "NVIDIA RTX 3060 / AMD Radeon RX 6700XT",
     "os": "Windows 10/11 (64-bit)",
     "RAM": "16 GB"
-  }
+  },
+  " dialouge": "💣 NO SECOND CHANCES. BATTLE TO THE END"
 },
 {
   "_id": {
@@ -482,7 +482,6 @@
   "rating": 3,
   "smalldes": "A multiplayer horror survival game where four survivors try to escape a terrifying killer. Use stealth, teamwork, and strategy to evade death and repair generators to escape.",
   "largedes": "<p><b style=\"color: #1DB954;\">A DEADLY GAME OF HUNT AND ESCAPE</b> :- Step into the fog where every match is a thrilling chase. Play as a ruthless killer or a desperate survivor in a multiplayer horror showdown.</p><p><b style=\"color: #1DB954;\">EVERY CHOICE IS LIFE OR DEATH</b> :- Work together to escape or embrace the darkness. With a variety of killers and survivors, no two games are ever the same.</p>",
-  "dialouge": "🩸 KILL OR BE KILLED",
   "genre": [
     "Horror",
     "Strategy"
@@ -507,5 +506,6 @@
     "gpu": "NVIDIA GTX 760 / AMD Radeon HD 8800",
     "os": "Windows 10/11 (64-bit)",
     "RAM": "8 GB"
-  }
+  },
+  " dialouge": "🩸 KILL OR BE KILLED"
 }]

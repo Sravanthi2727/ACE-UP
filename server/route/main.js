@@ -7,7 +7,9 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 const default_user = async () => {
-    return await udata.findOne({ email: "deafault" }).populate("carted");
+    return await udata.findOne({ email: "deafault" })
+    .populate("carted")
+    .populate("vaulted");
 }
 const default_user_cart = async (cart) => {
     return await udata.updateOne({ email: "deafault" },
@@ -37,10 +39,8 @@ const login = async (req, res, next) => {
             const token = req.cookies.token;
             const decoded = jwt.verify(token, "secretkey");
             req.user = await udata.findOne({ email: decoded.email })
-                .populate({
-                    path: "carted",
-                    model: "GAME_DATA"
-                });
+                .populate("carted")
+                .populate("vaulted");
         }
     } catch (error) {
         console.error("Authentication Error:", error);
@@ -139,6 +139,10 @@ route.delete("/cart",login, async (req, res) => {
 
 
 //gvault page route
+route.get("/gvault", login, async (req, res) => {
+    res.render("gvault", { user: req.user });
+})
+
 route.put("/gvault", login,async (req, res) => {
     if (req.user.email==="deafault") {
         let gid = req.body.gid;
