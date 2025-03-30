@@ -123,16 +123,13 @@ route.put("/cart", login, async (req, res) => {
 })
 
 
-route.delete("/cart", async (req, res) => {
-    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+route.delete("/cart",login, async (req, res) => {
+    if (req.user.email==="deafault") {
         let cart = req.body.carted;
         default_user_cart(cart);
     } else {
         let cart = req.body.carted;
-        const token = req.cookies.token;
-        const temp = jwt.verify(token, "secretkey");
-        await udata.updateOne(
-            { email: temp.email },
+        await req.user.updateOne(
             { $set: { carted: cart } }
         );
 
@@ -142,18 +139,15 @@ route.delete("/cart", async (req, res) => {
 
 
 //gvault page route
-route.put("/gvault", async (req, res) => {
-    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+route.put("/gvault", login,async (req, res) => {
+    if (req.user.email==="deafault") {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
         default_user_vault(gid);
     } else {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
-        const token = req.cookies.token;
-        const temp = jwt.verify(token, "secretkey");
-        await udata.updateOne(
-            { email: temp.email },
+        await req.user.updateOne(
             { $push: { vaulted: gid } }
         );
 
@@ -162,16 +156,13 @@ route.put("/gvault", async (req, res) => {
 
 
 //route for cutting gcash
-route.put("/gcash", async (req, res) => {
-    if (req.cookies.token == "" || Object.keys(req.cookies).length === 0) {
+route.put("/gcash",login, async (req, res) => {
+    if (req.user.email==="deafault") {
         let cash = req.body.gcash;
         default_user_gcash(cash);
     } else {
         let cash = req.body.gcash;
-        const token = req.cookies.token;
-        const temp = jwt.verify(token, "secretkey");
-        await udata.updateOne(
-            { email: temp.email },
+        await req.user.updateOne(
             { $set: { gcash: cash } }
         );
 
