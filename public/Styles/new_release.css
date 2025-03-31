@@ -1,0 +1,86 @@
+.main-content-new-release{
+    width: 72vw;
+    padding-top: 14vh;
+    margin-left: 28vh;
+}
+.heading{
+  font-size: xx-large;
+    font-family: "Curlz MT";
+    background: linear-gradient(90deg, #ff9900, #1db954);
+    color: transparent;
+    background-clip: text;
+    text-align: center;
+}
+
+
+.carousel-container {
+    overflow: hidden;
+    margin-top: 50px;
+    padding: 2rem 1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px #1db95455;
+  }
+  
+  .carousel-track {
+    display: flex;
+    gap: 2rem;
+    animation: scroll 20s alternate ease infinite;
+  }
+  
+  .carousel-card {
+    min-width: 250px;
+    background-color: #1e1e1e;
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s;
+  }
+  
+  .carousel-card img {
+    width: 100%;
+    border-radius: 10px;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .carousel-card h3 {
+    margin-top: 10px;
+    color: #1db954;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+  
+  .carousel-card:hover {
+    transform: scale(1.1);
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-30%);
+    }
+  }
+  footer {
+    background: rgba(24, 24, 24, 0.95);
+    padding: 10px;
+    
+  }
+  main {
+    padding-bottom: 200px; 
+  }
+  .carousel-container {
+    padding-bottom: 100px;
+    padding-top: 100px;
+  }
+  .coming-soon {
+    margin-top: 100px;
+    padding: 50px;
+    font-size: 1.5em;
+    color: #cab333;
+    text-shadow: 0 0 5px #1db954;
+    font-weight: bolder;
+  }

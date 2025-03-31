@@ -93,15 +93,19 @@ header {
 .game-card {
     padding: 70px 30px;
     border-radius: 15px;
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
     background-size: cover;
     background-position: center;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
     box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
     transition: 0.3s ease-in-out;
     background-color: #1e1e1e;
+    a{
+       text-decoration: none; 
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    }
+    
 
 }
 
@@ -116,10 +120,15 @@ header {
 .faq {
     padding: 2em;
     margin-top: 40px;
+    
 }
 
 .faq h2 {
     font-size: 26px;
+    font-family: "Curlz MT";
+    background: linear-gradient(90deg, #ff9900, #1db954);
+    color: transparent;
+    background-clip: text;
 }
 
 .faq-item {
@@ -129,6 +138,7 @@ header {
     background: #252525;
     box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
     transition: 0.3s;
+    color: white;
 }
 
 .faq-item:hover {

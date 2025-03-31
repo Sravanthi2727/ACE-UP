@@ -8,8 +8,8 @@ const jwt = require("jsonwebtoken");
 
 const default_user = async () => {
     return await udata.findOne({ email: "deafault" })
-    .populate("carted")
-    .populate("vaulted");
+        .populate("carted")
+        .populate("vaulted");
 }
 const default_user_cart = async (cart) => {
     return await udata.updateOne({ email: "deafault" },
@@ -123,8 +123,8 @@ route.put("/cart", login, async (req, res) => {
 })
 
 
-route.delete("/cart",login, async (req, res) => {
-    if (req.user.email==="deafault") {
+route.delete("/cart", login, async (req, res) => {
+    if (req.user.email === "deafault") {
         let cart = req.body.carted;
         default_user_cart(cart);
     } else {
@@ -143,8 +143,8 @@ route.get("/gvault", login, async (req, res) => {
     res.render("gvault", { user: req.user });
 })
 
-route.put("/gvault", login,async (req, res) => {
-    if (req.user.email==="deafault") {
+route.put("/gvault", login, async (req, res) => {
+    if (req.user.email === "deafault") {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
         default_user_vault(gid);
@@ -160,8 +160,8 @@ route.put("/gvault", login,async (req, res) => {
 
 
 //route for cutting gcash
-route.put("/gcash",login, async (req, res) => {
-    if (req.user.email==="deafault") {
+route.put("/gcash", login, async (req, res) => {
+    if (req.user.email === "deafault") {
         let cash = req.body.gcash;
         default_user_gcash(cash);
     } else {
@@ -176,6 +176,32 @@ route.put("/gcash",login, async (req, res) => {
 //helpline page route;
 route.get("/helpline", login, async (req, res) => {
     res.render("helpline", { user: req.user });
+})
+
+route.get("/top_picks", login, async (req, res) => {
+    try {
+        res.render(`top_picks`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
+route.get("/trending_games", login, async (req, res) => {
+    try {
+        res.render(`trending_games`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+route.get("/new_release", login, async (req, res) => {
+    try {
+        res.render(`new_release`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
 })
 
 
