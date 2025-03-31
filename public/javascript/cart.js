@@ -1,4 +1,3 @@
-
 let user;
 
 // Fetch user data

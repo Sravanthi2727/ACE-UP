@@ -1,0 +1,112 @@
+.main-content-wishlist {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 10vh;
+    padding-left: 28vh;
+    margin-bottom: 3em;
+}   
+
+.hcont{
+    margin: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4em;
+}
+/* Wishlist Item */
+.wishlist-item {
+    background: rgba(24, 24, 24, 0.95);
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
+    text-align: center;
+    transition: box-shadow 0.3s, transform 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 35em;
+    width: 20%;
+}
+
+.wishlist-item:hover {
+    box-shadow: 0px 5px 15px rgba(29, 185, 84, 0.8);
+    transform: scale(1.02);
+}
+
+/* Game Image */
+.game-image {
+    width: 100%;
+    border-radius: 10px;
+    height: 60%;
+    
+}
+
+/* Game Info */
+.game-info {
+    flex-grow: 1;
+    padding: 15px;
+}
+
+.game-info h3 {
+    color: #1db954;
+    margin: 10px 0;
+}
+
+.game-description {
+    color: #ccc;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+/* Price Styling */
+.game-price {
+    font-size: 16px;
+    font-weight: bold;
+    color: gold;
+    margin-top: 10px;
+}
+
+.game-price span {
+    color: #1db954;
+    font-size: 18px;
+}
+
+/* Buttons Container */
+.wishlist-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 5px;
+    position: absolute;
+    bottom: 15px;
+}
+
+/* Remove Button */
+.remove-btn {
+    background: #ff4c4c;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.remove-btn:hover {
+    background: #cc0000;
+}
+
+/* Move to Cart Button */
+.cart-btn {
+    background: #1db954;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.cart-btn:hover {
+    background: #17a347;
+}

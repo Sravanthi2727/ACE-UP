@@ -1,0 +1,25 @@
+<div class="main-content-wishlist">
+    <h2 class="heading">Your wishlist</h2>
+    <div class="hcont">
+        <% user.wishlisted.forEach(wish=> { %>
+            <div class="wishlist-item">
+                <img src="<%= wish.banner %>" alt="<%= wish.name %>" class="game-image">
+                <div class="game-info">
+                    <h3>
+                        <%= wish.name %>
+                    </h3>
+                    <p class="game-description">
+                        <%= wish.dialouge %>
+                    </p>
+                    <p class="game-price">
+                        <%= wish.price %>
+                    </p>
+                </div>
+                <div class="wishlist-buttons">
+                    <button class="remove-btn">Remove</button>
+                    <button class="cart-btn">Move to Cart</button>
+                </div>
+            </div>
+            <% }) %>
+    </div>
+</div>

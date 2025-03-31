@@ -9,10 +9,6 @@
     min-height: 100vh;
   }
   
-  #main-content h1 {
-    color: #ffffff;
-  }
-  
   #display-cart-game {
     display: flex;
     flex-direction: column;

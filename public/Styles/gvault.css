@@ -1,5 +1,6 @@
 .main-content-gvault {
     width: 100%;
+    min-height: 100vh;
     padding-top: 10vh;
     padding-left: 28vh;
 }

@@ -9,7 +9,8 @@ const jwt = require("jsonwebtoken");
 const default_user = async () => {
     return await udata.findOne({ email: "deafault" })
         .populate("carted")
-        .populate("vaulted");
+        .populate("vaulted")
+        .populate("wishlisted");
 }
 const default_user_cart = async (cart) => {
     return await udata.updateOne({ email: "deafault" },
@@ -40,7 +41,8 @@ const login = async (req, res, next) => {
             const decoded = jwt.verify(token, "secretkey");
             req.user = await udata.findOne({ email: decoded.email })
                 .populate("carted")
-                .populate("vaulted");
+                .populate("vaulted")
+                .populate("wishlisted");
         }
     } catch (error) {
         console.error("Authentication Error:", error);
@@ -156,6 +158,11 @@ route.put("/gvault", login, async (req, res) => {
         );
 
     }
+})
+
+//route for wishlist
+route.get("/wishlist", login, async (req, res) => {
+    res.render("wishlist", { user: req.user });
 })
 
 
