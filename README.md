@@ -22,23 +22,27 @@ our main objectives:
 
     Restrict Purchase Without Login but Allow Wishlist/Cart
 
-🚧 Pending Features:
-
     Wishlist Button Redirect
 
     G-Vault Button Redirect (Shows Purchased Games)
 
     Other Games Shown Behind the Top 5 Block
 
+    Cart/Wishlist Should Show Added Games
+
+    Purchased Games Should Appear in G-Vault
+
+🚧 Pending Features:
+    
     Game Page Redirect on Click
 
     Purchase, Add to Cart, etc., on Game Page
 
     Redirect When G-Cash is Over & Implement Payment System
 
-    Cart/Wishlist Should Show Added Games
+    
 
-    Purchased Games Should Appear in G-Vault
+    
         
 
 ---> if you got more ideas please add on <-----
