@@ -81,7 +81,7 @@
 }
 
 /* Remove Button */
-.remove-btn {
+.remove-btnn {
     background: #ff4c4c;
     color: white;
     padding: 10px 15px;
@@ -92,7 +92,7 @@
     width: 100%;
 }
 
-.remove-btn:hover {
+.remove-btnn:hover {
     background: #cc0000;
 }
 

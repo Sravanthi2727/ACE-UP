@@ -18,6 +18,18 @@ const default_user_cart = async (cart) => {
     )
 }
 
+const default_user_cart_id = async (cart) => {
+    return await udata.updateOne({ email: "deafault" },
+        { $push: { carted: cart } }
+    )
+}
+
+const default_user_wishlist = async (wish) => {
+    return await udata.updateOne({ email: "deafault" },
+        { $set: { wishlisted: wish } }
+    )
+}
+
 const default_user_gcash = async (cash) => {
     return await udata.updateOne({ email: "deafault" },
         { $set: { gcash: cash } }
@@ -124,6 +136,19 @@ route.put("/cart", login, async (req, res) => {
     res.json(req.user);
 })
 
+route.post("/cart", login, async (req, res) => {
+    if (req.user.email === "deafault") {
+        let cart = req.body.carted;
+        default_user_cart_id(cart);
+    } else {
+        let cart = req.body.carted;
+        await req.user.updateOne(
+            { $push: { carted: cart } }
+        );
+
+    }
+    res.json({ redirect: "/wishlist" });
+})
 
 route.delete("/cart", login, async (req, res) => {
     if (req.user.email === "deafault") {
@@ -163,6 +188,20 @@ route.put("/gvault", login, async (req, res) => {
 //route for wishlist
 route.get("/wishlist", login, async (req, res) => {
     res.render("wishlist", { user: req.user });
+})
+
+route.delete("/wishlist", login, async (req, res) => {
+    if (req.user.email === "deafault") {
+        let wish = req.body.wishlisted;
+        default_user_wishlist(wish);
+    } else {
+        let wish = req.body.wishlisted;
+        await req.user.updateOne(
+            { $set: { wishlisted: wish } }
+        );
+
+    }
+    res.json({ redirect: "/wishlist" });
 })
 
 

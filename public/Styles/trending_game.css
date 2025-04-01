@@ -12,6 +12,7 @@
   }
   
   .ggccard {
+    text-align: center;
     background-color: #1e1e1e;
     border-radius: 20px;
     overflow: hidden;
