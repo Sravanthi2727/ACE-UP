@@ -63,12 +63,18 @@ nav {
 }
 
 /* Header */
+
 header {
     font-size: 25px;
     padding: 100px 20px 20px;
     margin-top: 20px;
 }
-
+.glow-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: white; /* Green Text */
+    text-shadow: 0 0 10px #1db954, 0 0 20px #1db954, 0 0 40px #1db954;
+}
 .sub-heading {
     font-size: 18px;
     margin-top: 5px;
