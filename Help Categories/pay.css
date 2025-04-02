@@ -62,16 +62,38 @@ nav {
     background: #17a347;
 }
 
-/* Header */
-header {
-    padding: 100px 20px 20px;
-    margin-top: 20px;
+/* Updated Header Section  */
+.hero {
+    background: url('payment-bg.jpg') no-repeat center center/cover;
+    padding: 80px 20px;
+    text-align: center;
+    position: relative;
+    color: white;
 }
 
-.sub-heading {
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #1db954;
+}
+
+.hero p {
     font-size: 18px;
-    margin-top: 5px;
-    color: #bbb;
+    color: #ccc;
 }
 
 /* Issue Box */
