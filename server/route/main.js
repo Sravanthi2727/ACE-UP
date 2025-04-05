@@ -135,7 +135,7 @@ route.get("/cart", login, async (req, res) => {
 route.put("/cart", login, async (req, res) => {
     res.json(req.user);
 })
-
+// route to add item in cart via game id
 route.post("/cart", login, async (req, res) => {
     if (req.user.email === "deafault") {
         let cart = req.body.carted;
@@ -149,7 +149,7 @@ route.post("/cart", login, async (req, res) => {
     }
     res.json({ redirect: "/wishlist" });
 })
-
+// route to remove item from cart
 route.delete("/cart", login, async (req, res) => {
     if (req.user.email === "deafault") {
         let cart = req.body.carted;
@@ -169,7 +169,7 @@ route.delete("/cart", login, async (req, res) => {
 route.get("/gvault", login, async (req, res) => {
     res.render("gvault", { user: req.user });
 })
-
+// route to update the value of gcash
 route.put("/gvault", login, async (req, res) => {
     if (req.user.email === "deafault") {
         let gid = req.body.gid;
@@ -189,7 +189,7 @@ route.put("/gvault", login, async (req, res) => {
 route.get("/wishlist", login, async (req, res) => {
     res.render("wishlist", { user: req.user });
 })
-
+//route to remove game from wishlist
 route.delete("/wishlist", login, async (req, res) => {
     if (req.user.email === "deafault") {
         let wish = req.body.wishlisted;
