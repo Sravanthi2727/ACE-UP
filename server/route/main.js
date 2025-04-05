@@ -224,6 +224,7 @@ route.get("/helpline", login, async (req, res) => {
     res.render("helpline", { user: req.user });
 })
 
+//top_pics rendering
 route.get("/top_picks", login, async (req, res) => {
     try {
         res.render(`top_picks`, { user: req.user });
@@ -232,7 +233,7 @@ route.get("/top_picks", login, async (req, res) => {
         res.status(500).send("Error rendering page");
     }
 })
-
+//trending_games Rendering
 route.get("/trending_games", login, async (req, res) => {
     try {
         res.render(`trending_games`, { user: req.user });
@@ -241,6 +242,8 @@ route.get("/trending_games", login, async (req, res) => {
         res.status(500).send("Error rendering page");
     }
 })
+
+//new_release rendering
 route.get("/new_release", login, async (req, res) => {
     try {
         res.render(`new_release`, { user: req.user });
@@ -250,5 +253,52 @@ route.get("/new_release", login, async (req, res) => {
     }
 })
 
+//account page rendering
+route.get("/account", login, async (req, res) => {
+    try {
+        res.render(`account`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
+
+//payment issue page rendering
+route.get("/payment_issue", login, async (req, res) => {
+    try {
+        res.render(`payment`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
+
+//tech support page rendering
+route.get("/tech_supp", login, async (req, res) => {
+    try {
+        res.render(`tech_supp`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
+
+//contact page renderint
+route.get("/contact", login, async (req, res) => {
+    try {
+        res.render(`contact`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
+
+//download issue rendering
+
+//game issue renderint
 
 module.exports = route     

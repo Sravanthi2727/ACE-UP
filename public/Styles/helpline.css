@@ -73,6 +73,13 @@ header {
     transition: 0.3s;
     background-color: #1e1e1e;
 }
+
+.category a{
+    text-decoration: none; 
+ font-size: 18px;
+ font-weight: bold;
+ color: white;
+ }
 .games-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
