@@ -1,0 +1,74 @@
+.main-content-game_issue {
+    width: 100%;
+    padding-top: 10vh;
+    padding-left: 28vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    min-height: 100vh;
+  }.glow-text {
+    font-size: 2.5rem;
+    color: #00ffe0;
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  }
+  
+  .sub-heading {
+    color: #bbbbbb;
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Issues Section */
+  .issues-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
+  /* Each Issue Box */
+  .issue-box {
+    background-color: #1f1f1f;
+    border: 1px solid #2e2e2e;
+    border-left: 5px solid #00ffe0;
+    border-radius: 10px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 255, 224, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .issue-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 255, 224, 0.3);
+  }
+  
+  .issue-box h3 {
+    color: #00ffe0;
+    font-size: 1.5rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .issue-box p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #e0e0e0;
+  }
+  
+  .issue-box strong {
+    color: #ffffff;
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .main-content-game_issue {
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  
+    .glow-text {
+      font-size: 2rem;
+    }
+  
+    .issue-box {
+      padding: 1rem 1.5rem;
+    }
+  }

@@ -298,7 +298,24 @@ route.get("/contact", login, async (req, res) => {
 
 
 //download issue rendering
+route.get("/download_prob", login, async (req, res) => {
+    try {
+        res.render(`download_issue`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
 
 //game issue renderint
+route.get("/game_issue", login, async (req, res) => {
+    try {
+        res.render(`game_issue`, { user: req.user });
+    } catch (error) {
+        console.error("EJS Rendering Error:", error);
+        res.status(500).send("Error rendering page");
+    }
+})
+
 
 module.exports = route     
