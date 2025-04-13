@@ -1,0 +1,16 @@
+[
+  {
+    "_id": {
+      "$oid": "67e2f2d248e42965febc6ee3"
+    },
+    "username": "default",
+    "email": "deafault",
+    "password": "default",
+    "carted": [
+      "67e9375a2d7b0dfa3f8ecbe4"
+    ],
+    "wishlisted": [],
+    "vaulted": [],
+    "gcash": 865
+  }
+]

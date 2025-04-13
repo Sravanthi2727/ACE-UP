@@ -1,0 +1,252 @@
+.main-content-game {
+    width: 100%;
+    padding-top: 10vh;
+    padding-left: 28vh;
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+    min-height: 100vh;
+}
+#controler{
+    display: flex;
+
+}
+
+#sect-1 {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+#valo {
+    font-size: xx-large;
+    font-weight: bold;
+    color: #fe4551;
+    transition: font-size 1s;
+}
+
+#valo:hover {
+    cursor: pointer;
+    font-size: xxx-large;
+}
+
+#rating {
+    margin: 1em 0;
+    font-weight: bolder;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#sect-1 video {
+    width: 100%;
+    margin-bottom: 3em;
+    border-radius: 5px;
+    transition: box-shadow 0.3s;
+}
+
+#sect-1 video:hover {
+    box-shadow: 0px 0px 3px 1px #444;
+}
+
+#small-description {
+    font-size: large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    margin-bottom: 3em;
+}
+
+#fil {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-bottom: 4em;
+    gap: 3em;
+}
+
+.genre {
+    display: flex;
+    flex-direction: column;
+}
+
+.genre h4 {
+    margin-bottom: 1em;
+    font-weight: lighter;
+    font-family: Geneva, Verdana, sans-serif;
+    transition: font-size 1s;
+}
+
+.genre h4:hover {
+    cursor: pointer;
+    color: #1da1f2;
+    font-size: large;
+}
+
+.genre button {
+    padding:0.5em;
+    margin: 0.3em;
+    border: none;
+    border-radius: 5px;
+    background-color: #444;
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+.genre button:hover {
+    cursor: pointer;
+    background-color: #6e5494;
+}
+
+#description {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#second-valo {
+    margin-top: 1em;
+    font-size: x-large;
+    font-weight: bold;
+    transition: font-size 1s;
+}
+
+#second-valo:hover {
+    cursor: pointer;
+    color: #fe4551;
+    font-size: xx-large;
+}
+
+#dialouge {
+    font-size: large;
+}
+
+/* Section 2 */
+#sect-2 {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    padding-top: 8em;
+}
+
+#sect-2 img {
+    width: 50%;
+    height: auto;
+    transform: scale(1.3);
+    transition: transform 0.5s;
+    margin-bottom: 4em;
+}
+
+#sect-2 img:hover {
+    transform: scale(1.5);
+}
+
+#sect-2 #base {
+    width: 25%;
+    padding: 0.5em;
+    border: none;
+    border-radius: 6px;
+    background-color: #444;
+    color: #fff;
+    margin-top: 1em;
+}
+
+#sect-2 .bt {
+    width: 45%;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    font-size: large;
+    background-color: rgb(227, 211, 60);
+    transition: transform 1s, background-color 0.3s;
+}
+
+#sect-2 p{
+    padding-left:2em;
+    padding-right:2em;
+}
+
+#sect-2 .bt:hover {
+    background-color: #1db954;
+    color: #fff;
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+/* System Requirements */
+#system-requirment {
+    width: 100%;
+    padding-left: 28vh;
+    margin: 3em 0;
+    overflow: hidden;
+}
+
+#my-os {
+    font-size: x-large;
+    margin-bottom: 3em;
+}
+
+#comparison {
+    display: flex;
+    justify-content: space-between;
+    background-color: #444;
+    height: 120vh;
+    width: 75%;
+    border-radius: 7px;
+    padding-left: 5%;
+    box-shadow: 0px 0px 10px 5px #444;
+}
+
+#mini-rec {
+    display: flex;
+    justify-content: space-around;
+}
+
+#mini {
+    width: 90%;
+}
+
+#mini h3 {
+    margin-top: 0.5em;
+}
+
+#mini>div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    width: 100%;
+}
+
+#mini>div>div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+#mini>div>div h5 {
+    color: darkgray;
+}
+
+#mini>div>div p {
+    margin-top: 0.5em;
+}
+
+#lang {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+#lang h5 {
+    margin-top: 4em;
+    color: darkgray;
+}
+
+#lang #copy-right {
+    color: darkgray;
+}

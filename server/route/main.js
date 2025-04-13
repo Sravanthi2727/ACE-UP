@@ -318,4 +318,11 @@ route.get("/game_issue", login, async (req, res) => {
 })
 
 
+//main game rendering!
+route.get("/game/:id", login, async (req, res) => {
+    const game_id = req.params.id;
+    const game_data = await gdata.findOne({_id:new mongoose.Types.ObjectId(game_id) });
+    res.render("game", { user: req.user,game:game_data });
+})
+
 module.exports = route     
