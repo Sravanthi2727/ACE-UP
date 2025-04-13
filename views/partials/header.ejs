@@ -1,74 +1,114 @@
 <header>
-    <div id="navbar">
-        <div id="logo"></div>
-        <a href="/">
-            <h1>Ace-Up</h1>
-        </a>
-        <% if (user.email==="deafault") { %>
-            <div id="con">
-                <div id="login" class="nav">
-                    <button id="profile-btn">
-                        <i class="fa-solid fa-user"></i>
-                        Sign-Up
-                    </button>
-                </div>
-            </div>
-        <% } else { %>
-            <div class="profile">
-                <h4><%= user.username %></h4>
-            </div>
-            <div class="profile">
-                <p>₹<%= user.gcash %></p>
-                <p><i class="fa-solid fa-sack-dollar"></i><span></span></p>
-            </div>
-         <% } %>
-        
+  <div id="navbar">
+    <div id="logo"></div>
+    <a href="/">
+      <h1>Ace-Up</h1>
+    </a>
+    <div class="search">
+      <form action="">
+        <input
+          type="search"
+          placeholder="Search here  ..."
+          style="background-color: black"
+        />
+        <i class="fa fa-search"></i>
+      </form>
     </div>
-    <div id="popup-signup">
-        <div class="login-container">
-            <div class="login-box">
-                <h2>Create your Account</h2>
-                <a>Already have an Account?</a>
-                <form action="/signup" method="post">
-                    <div class="input-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" placeholder="Enter your E-mail"
-                            onkeyup="checkform()" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="username">Set-Username</label>
-                        <input type="text" id="username" name="username" onkeyup="checkform()"
-                            placeholder="Enter your username" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="pwd">Set-Password (greater than 8 chars)</label>
-                        <input type="password" id="pwd" name="password" placeholder="Enter your password"
-                            onkeyup="checkform()" pattern=".{8,}" required />
-                    </div>
-                    <button id="login-submit" disabled="disabled">Submit</button>
-                </form>
-            </div>
-        </div>
+    <% if (user.email==="deafault") { %>
+    <div id="con">
+      <div id="login" class="nav">
+        <button id="profile-btn">
+          <i class="fa-solid fa-user"></i>
+          Sign-Up
+        </button>
+      </div>
     </div>
-    <div id="popup-login">
-        <div class="login-container">
-            <div class="login-box">
-                <h2>Login with your Account</h2>
-                <form action="/login" method="post">
-                    <div class="input-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="emaill" name="email" placeholder="Enter your E-mail"
-                            onkeyup="checkkForm()" required />
-                    </div>
-                    <div class="input-group">
-                        <label for="pwd">Set-Password (greater than 8 chars)</label>
-                        <input type="password" id="pwdd" name="password" placeholder="Enter your password"
-                            onkeyup="checkkForm()" pattern=".{8,}" required />
-                    </div>
-                    <button id="login-submiit" disabled="disabled">Submit</button>
-                </form>
-            </div>
-        </div>
+    <% } else { %>
+    <div class="profile">
+      <h4><%= user.username %></h4>
     </div>
-
+    <div class="profile">
+      <p>₹<%= user.gcash %></p>
+      <p><i class="fa-solid fa-sack-dollar"></i><span></span></p>
+    </div>
+    <% } %>
+  </div>
+  <div id="popup-signup">
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Create your Account</h2>
+        <a>Already have an Account?</a>
+        <form action="/signup" method="post">
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your E-mail"
+              onkeyup="checkform()"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="username">Set-Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              onkeyup="checkform()"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="pwd">Set-Password (greater than 8 chars)</label>
+            <input
+              type="password"
+              id="pwd"
+              name="password"
+              placeholder="Enter your password"
+              onkeyup="checkform()"
+              pattern=".{8,}"
+              required
+            />
+          </div>
+          <button id="login-submit" disabled="disabled">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div id="popup-login">
+    <div class="login-container">
+      <div class="login-box">
+        <h2>Login with your Account</h2>
+        <form action="/login" method="post">
+          <div class="input-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="emaill"
+              name="email"
+              placeholder="Enter your E-mail"
+              onkeyup="checkkForm()"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="pwd">Set-Password (greater than 8 chars)</label>
+            <input
+              type="password"
+              id="pwdd"
+              name="password"
+              placeholder="Enter your password"
+              onkeyup="checkkForm()"
+              pattern=".{8,}"
+              required
+            />
+          </div>
+          <button id="login-submiit" disabled="disabled">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </header>
