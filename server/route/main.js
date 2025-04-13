@@ -76,12 +76,13 @@ route.post("/signup", async (req, res) => {
         // checking that user already exist or not
         const check = await udata.findOne({ email });
         if (check) {
+            alert("Something went wrong!");
             res.redirect("/");
         } else {
             // providing more sequrity to it's password!
             const salt = await bcrypt.genSalt(10);
             const hash = await bcrypt.hash(password, salt);
-            const user = await udata.create({ username, email, password: hash, gcash: 1000 });
+            const user = await udata.create({ username, email, password: hash, gcash: 100000 });
 
             // by providing cookies we are making him log in!
             let token = jwt.sign({ email }, "secretkey");
@@ -117,6 +118,7 @@ route.post("/login", async (req, res) => {
             })
 
         } else {
+            alert("Something went wrong");
             res.redirect("/");
 
         }
@@ -169,18 +171,22 @@ route.delete("/cart", login, async (req, res) => {
 route.get("/gvault", login, async (req, res) => {
     res.render("gvault", { user: req.user });
 })
+
+
 // route to update the value of gcash
 route.put("/gvault", login, async (req, res) => {
     if (req.user.email === "deafault") {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
         default_user_vault(gid);
+        res.redirect("/gvault");
     } else {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
         await req.user.updateOne(
             { $push: { vaulted: gid } }
         );
+        res.redirect("/gvault");
 
     }
 })
@@ -196,6 +202,7 @@ route.delete("/wishlist", login, async (req, res) => {
         default_user_wishlist(wish);
     } else {
         let wish = req.body.wishlisted;
+        console.log(wish);
         await req.user.updateOne(
             { $set: { wishlisted: wish } }
         );
@@ -203,6 +210,22 @@ route.delete("/wishlist", login, async (req, res) => {
     }
     res.json({ redirect: "/wishlist" });
 })
+//route to add game in wishlist
+route.put("/wishlist", login, async (req, res) => {
+    if (req.user.email === "deafault") {
+        let wish = req.body.wishlisted;
+        default_user_wishlist(wish);
+    } else {
+        let wish = req.body.wishlisted;
+        console.log(wish);
+        await req.user.updateOne(
+            { $set: { wishlisted: wish } }
+        );
+
+    }
+    res.json({ redirect: "/wishlist" });
+})
+
 
 
 //route for cutting gcash
@@ -321,8 +344,11 @@ route.get("/game_issue", login, async (req, res) => {
 //main game rendering!
 route.get("/game/:id", login, async (req, res) => {
     const game_id = req.params.id;
-    const game_data = await gdata.findOne({_id:new mongoose.Types.ObjectId(game_id) });
-    res.render("game", { user: req.user,game:game_data });
+    if (!mongoose.Types.ObjectId.isValid(game_id)) {
+        return res.status(400).send("Invalid Game ID");
+    }
+    const game_data = await gdata.findOne({ _id: new mongoose.Types.ObjectId(game_id) });
+    res.render("game", { user: req.user, game: game_data });
 })
 
 module.exports = route     

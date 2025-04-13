@@ -34,10 +34,10 @@ our main objectives:
     
     Game Page Redirect on Click
 
-🚧 Pending Features:
-    
     Purchase, Add to Cart, etc., on Game Page
 
+🚧 Pending Features:
+    
     Redirect When G-Cash is Over & Implement Payment System
 
     

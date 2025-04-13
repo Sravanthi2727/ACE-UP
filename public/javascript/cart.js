@@ -16,6 +16,7 @@ fetchUser();
 
 // sending array to backend to remove game from cart
 const modify_cart = async (cart) => {
+    console.log("Ima in cart")
     try {
         const response = await fetch("http://localhost:3000/cart", {
             method: "DELETE",
@@ -79,6 +80,7 @@ document.addEventListener("click", (event) => {
                         modify_gcash(user.gcash);
                         modify_vault(gid);
                         modify_cart(user.carted);
+                        alert("Game Purchased, check your vault");
                     } else {
                         alert("Not enough money");
                     }

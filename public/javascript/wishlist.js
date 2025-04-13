@@ -32,6 +32,24 @@ const modify_wishlist = async (wish) => {
     }
 };
 
+const modify_wishlistt = async (wish) => {
+    try {
+        const response = await fetch("http://localhost:3000/wishlist", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ wishlisted: wish })
+        });
+        const data = await response.json();
+        if (data.redirect) {
+            // Now redirect the browser
+            window.location.href = data.redirect;
+        }
+
+    } catch (error) {
+        console.error("Error:", error);
+    }
+};
+
 
 // sending game id to backend to add it in cart
 const modify_cartt = async (cart) => {
@@ -70,7 +88,9 @@ document.addEventListener("click", (event) => {
                     });
                     console.log(ccheck);
                     if(ccheck){
-                        //  modify_cartt(gid);
+                        user.carted.push(gid);
+                         modify_cart(user.carted);
+                         alert("Game added to cart")
                     }
                 } else if(event.target.classList.contains("remove-btnn")) {
                     modify_wishlist(userr.wishlisted)

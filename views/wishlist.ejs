@@ -1,7 +1,9 @@
 <div class="main-content-wishlist">
     <h2 class="heading">Your wishlist</h2>
+    <% let wish_item=0; %>
     <div class="hcont">
         <% user.wishlisted.forEach(wish=> { %>
+            <% wish_item++; %>
             <div class="wishlist-item">
                 <img src="<%= wish.banner %>" alt="<%= wish.name %>" class="game-image">
                 <div class="game-info">
@@ -21,5 +23,13 @@
                 </div>
             </div>
             <% }) %>
+            <div class="wish-summary">
+                <% if (wish_item===0) { %>
+                    <h2 class="wish-total-text">No items in the wishlist</h2>
+                    <% }else{ %>
+                        <h2 class="wish-total-text">No of Items are -><%= wish_item %>
+                        </h2>
+                        <% } %>
+            </div>
     </div>
 </div>

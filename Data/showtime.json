@@ -1,0 +1,38 @@
+{
+  "name": "F1 25",
+  "price": "₹ 4,299",
+  "banner": "images/F1_25 banner.jpg",
+  "poster": "images/F1_25 home.jpg",
+  "logo": "images/F1_25 logo.jpg",
+  "video": "videos/F1_25.mp4",
+  "rating": 4.4,
+  "smalldes": "The official Formula One racing game returns with enhanced realism, new circuits, and dynamic career mode.",
+  "largedes": "<p><b style=\"color: #1DB954;\">REAL RACING EVOLVED</b> :- Feel the speed in every turn with improved physics, tire wear systems, and AI behavior.</p><p><b style=\"color: #1DB954;\">BECOME A CHAMPION</b> :- Start your journey in My Team mode, rise through the ranks, and dominate the F1 circuit like never before.</p>",
+  "genre": [
+    "Racing",
+    "Simulation",
+    "Sports"
+  ],
+  "developer": "Codemasters",
+  "features": [
+    "My Team Mode",
+    "Dynamic Weather",
+    "Split Screen & Online Multiplayer",
+    "Real-World Circuits"
+  ],
+  "min": {
+    "cpu": "Intel Core i3-2130 / AMD FX 4300",
+    "gpu": "NVIDIA GTX 950 / AMD RX 460",
+    "os": "Windows 10 (64-bit)",
+    "RAM": "8 GB"
+  },
+  "max": {
+    "cpu": "Intel Core i7-10700K / AMD Ryzen 7 5800X",
+    "gpu": "NVIDIA RTX 3070 / AMD RX 6800",
+    "os": "Windows 11 (64-bit)",
+    "RAM": "16 GB"
+  },
+  "desc": "Every millisecond matters. Rule the track.",
+  "warn": "3+ -> Mild Risk of Speed Addiction 😄",
+  "dialouge": "🏁 START YOUR ENGINES!"
+}
