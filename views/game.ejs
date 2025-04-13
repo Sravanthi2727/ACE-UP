@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Valorant</title>
+    <link rel="stylesheet" href="/game.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div id="navbar">
+        <div id="logo"></div>
+        <a href="../index.html"><h1>Ace-Up</h1></a>
+        <div id="con">
+          <div id="login" class="nav">
+            <button id="profile-btn">
+              <i class="fa-solid fa-user"></i>
+              Sign-Up
+            </button>
+          </div>
+        </div>
+        <div class="profile">
+          <h4>Vajud04</h4>
+        </div>
+        <div class="profile">
+          <p>G-Cash</p>
+          <p><i class="fa-solid fa-sack-dollar"></i><span></span></p>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div id="sec-con">
+        <div id="shop">
+          <div id="cart" class="cem">
+            <a href=""> <i class="fa-solid fa-cart-plus"></i> Cart</a>
+          </div>
+          <div id="wishlist" class="cem">
+            <a href=""> <i class="fa-solid fa-list"></i> Wishlist</a>
+          </div>
+          <div id="gvault" class="cem">
+            <a href=""><i class="fa-solid fa-gamepad"></i> G-vault</a>
+          </div>
+          <div id="helpline" class="cem">
+            <a href=""><i class="fa-solid fa-phone"></i> Helpline</a>
+          </div>
+          <div id="symbol">
+            <i id="youtube" class="fa-brands fa-youtube"></i>
+            <i id="facebook" class="fa-brands fa-facebook"></i>
+            <i id="linkedin" class="fa-brands fa-linkedin"></i>
+            <i id="github" class="fa-brands fa-github"></i>
+            <i id="twitter" class="fa-brands fa-twitter"></i>
+          </div>
+        </div>
+        <div id="main-content">
+          <div id="popup-login">
+            <div class="login-container">
+              <div class="login-box">
+                <h2>Create your Account</h2>
+                <form>
+                  <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      placeholder="Enter your E-mail"
+                      onkeyup="checkform()"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="username">Set-Username</label>
+                    <input
+                      type="text"
+                      id="username"
+                      name="username"
+                      onkeyup="checkform()"
+                      placeholder="Enter your username"
+                      required
+                    />
+                  </div>
+                  <div class="input-group">
+                    <label for="pwd">Set-Password</label>
+                    <input
+                      type="password"
+                      id="pwd"
+                      name="pwd"
+                      placeholder="Enter your password"
+                      onkeyup="checkform()"
+                      pattern=".{8,}"
+                      required
+                    />
+                  </div>
+                  <button id="login-submit" disabled="disabled">Sumbit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div id="sect-1">
+            <% if(game){ %>
+            <h1 id="valo"><%= game.name %></h1>
+            <p id="rating"><%= game.rating %></p>
+            <video
+              src="../Videos/DAWN BREAKS _ Waylay Agent Trailer - VALORANT.mp4"
+              muted
+              autoplay
+              controls
+            ></video>
+            <p id="small-description"><%= game.smalldes %></p>
+            <div id="fil">
+              <div class="genre">
+                <h4>Genre</h4>
+                <div>
+                  <% for (let i = 0; i < game.genre.length; i++) { %>
+                  <button><%= game.genre[i] %></button>
+                  <% } %>
+                </div>
+              </div>
+              <div class="genre">
+                <h4>Features</h4>
+                <div>
+                  <% for (let i = 0; i < game.features.length; i++) { %>
+                  <button><%= game.features[i] %></button>
+                  <% } %>
+                </div>
+              </div>
+            </div>
+            <div id="description">
+              <h3 id="second-valo"><%= game.name %></h3>
+              <h5 id="dialouge"><%= game.dialouge %></h5>
+              <p class="large-description"><%= largedes %></p>
+            </div>
+          </div>
+          <div id="sect-2">
+            <img src="../Images/Valorant logo.jpg" alt="logo" />
+            <button id="base">Base Game</button>
+            <button class="bt purchase">
+              <i class="fa-solid fa-shop"></i> Free
+            </button>
+            <button class="bt cart">
+              <i class="fa-solid fa-cart-plus"></i> Add to Cart
+            </button>
+            <button class="bt cart">
+              <i class="fa-solid fa-list"></i> Add to Wishlist
+            </button>
+            <p>Developer : <%= game.devloper %></p>
+            <p>Publisher : Ace-Up</p>
+          </div>
+        </div>
+        <div id="system-requirment">
+          <div>
+            <p id="my-os">
+              <i class="fa-brands fa-windows"></i> Windows System Requirment
+            </p>
+            <div id="comparison">
+              <div id="mini">
+                <div id="mini-rec">
+                  <h3>Minimum</h3>
+                  <h3>Recommended</h3>
+                </div>
+                <div>
+                  <div>
+                    <h5>OS</h5>
+                    <p><%= game.min.os %></p>
+                  </div>
+                  <div>
+                    <h5>OS</h5>
+                    <p><%= game.max.os %></p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h5>Processor</h5>
+                    <p><%= game.min.cpu %></p>
+                  </div>
+                  <div>
+                    <h5>Processor</h5>
+                    <p><%= game.max.cpu %></p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h5>Memory</h5>
+                    <p><%= game.min.RAM%></p>
+                  </div>
+                  <div>
+                    <h5>Memory</h5>
+                    <p><%= game.max.RAM %></p>
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <h5>Graphics</h5>
+                    <p><%= game.min.gpu %></p>
+                  </div>
+                  <div>
+                    <h5>Graphics</h5>
+                    <p><%= game.max.gpu %></p>
+                  </div>
+                </div>
+                <div id="lang">
+                  <h5>Languages Supported</h5>
+                  <p>
+                    Audio: Portuguese - Brazil, Polish, Arabic, French, German,
+                    Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
+                    Traditional, Vietnamese, Turkish, Korean
+                  </p>
+                  <p>
+                    Text: Portuguese - Brazil, Polish, Arabic, French, German,
+                    Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
+                    Traditional, Turkish, Vietnamese, Korean
+                  </p>
+
+                  <p id="copy-right">
+                    © 2020-2025 Ace-Up, Inc. <%= game.name %> and the <%=
+                    game.name %> Logo are trademarks, service marks, and/or
+                    registered trademarks of Ace-Up, Inc.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <pre>
+            © 2025, Ace-Up, Inc. All rights reserved. Ace-Up,The Ace-UP logo, Valorant, the Valorant logo, Unreal, Unreal Engine, the Unreal Engine logo, Unreal
+            Tournament, and the Unreal Tournament logo are trademarks or registered trademarks of Ace-Up, Inc. in the India and elsewhere. Othe
+            brands or product names are the trademarks of their respective owners.
+            Our websites may contain links to other sites and resources provided by third parties. These links are provided for your convenience only. Ace-Up has no control
+            over the contents of those sites or resources, and accepts no responsibility for them or for any loss or damage that may arise from your use of them.
+        </pre
+      >
+    </footer>
+    <% }; %>
+    <script src="/game.js"></script>
+  </body>
+</html>
