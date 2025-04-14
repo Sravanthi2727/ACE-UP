@@ -1,144 +1,180 @@
 <div class="main-content-game">
-    <div id="controler">
-      <div id="sect-1">
-        <% if (game) { %>
-          <h1 id="valo"><%= game.name %></h1>
-          <p id="rating"><%= game.rating %></p>
-          <video
-            src="/<%= game.video %>"
-            autoplay
-            controls
-          ></video>
-          <p id="small-description"><%= game.smalldes %></p>
-    
-          <div id="fil">
-            <div class="genre">
-              <h4>Genre</h4>
-              <div>
-                <% if (game.genre && game.genre.length > 0) { %>
-                  <% for (let i = 0; i < game.genre.length; i++) { %>
-                    <button><%= game.genre[i] %></button>
+  <div id="controler">
+    <div id="sect-1">
+      <% if (game) { %>
+        <h1 id="valo">
+          <%= game.name %>
+        </h1>
+        <p id="rating">
+          <%= game.rating %>
+        </p>
+        <video src="/<%= game.video %>" autoplay controls></video>
+        <p id="small-description">
+          <%= game.smalldes %>
+        </p>
+
+        <div id="fil">
+          <div class="genre">
+            <h4>Genre</h4>
+            <div>
+              <% if (game.genre && game.genre.length> 0) { %>
+                <% for (let i=0; i < game.genre.length; i++) { %>
+                  <button>
+                    <%= game.genre[i] %>
+                  </button>
                   <% } %>
-                <% } else { %>
-                  <p>No features listed</p>
-                <% } %>
-              </div>
-            </div>
-    
-            <div class="genre">
-              <h4>Features</h4>
-              <div>
-                <% if (game.features && game.features.length > 0) { %>
-                  <% for (let i = 0; i < game.features.length; i++) { %>
-                    <button><%= game.features[i] %></button>
-                  <% } %>
-                <% } else { %>
-                  <p>No features listed</p>
-                <% } %>
-              </div>
+                    <% } else { %>
+                      <p>No features listed</p>
+                      <% } %>
             </div>
           </div>
-    
-          <div id="description">
-            <h3 id="second-valo"><%= game.name %></h3>
-            <h5 id="dialouge"><%= game.dialouge %></h5>
-            <p class="large-description"><%- game.largedes %></p>
+
+          <div class="genre">
+            <h4>Features</h4>
+            <div>
+              <% if (game.features && game.features.length> 0) { %>
+                <% for (let i=0; i < game.features.length; i++) { %>
+                  <button>
+                    <%= game.features[i] %>
+                  </button>
+                  <% } %>
+                    <% } else { %>
+                      <p>No features listed</p>
+                      <% } %>
+            </div>
           </div>
+        </div>
+
+        <div id="description">
+          <h3 id="second-valo">
+            <%= game.name %>
+          </h3>
+          <h5 id="dialouge">
+            <%= game.dialouge %>
+          </h5>
+          <p class="large-description"><%- game.largedes %></p>
+        </div>
         <% } else { %>
           <h1>Game not found</h1>
-        <% } %>
-      </div>
-    
-      <div id="sect-2">
-        <img src="<%= game.logo %>" alt="logo" />
-        <button id="base">Base Game</button>
-        <button class="bt purchase">
-          <i class="fa-solid fa-shop"></i> <%= game.price %>
-        </button>
-        <button class="bt cart">
-          <i class="fa-solid fa-cart-plus"></i> Add to Cart
-        </button>
-        <button class="bt cart">
-          <i class="fa-solid fa-list"></i> Add to Wishlist
-        </button>
-        <p>Developer : <%= game.developer %></p>
-        <p>Publisher : Ace-Up</p>
-      </div>
+          <% } %>
     </div>
-  
-    <div id="system-requirment">
-      <div>
-        <p id="my-os">
-          <i class="fa-brands fa-windows"></i> Windows System Requirement
-        </p>
-        <div id="comparison">
-          <div id="mini">
-            <div id="mini-rec">
-              <h3>Minimum</h3>
-              <h3>Recommended</h3>
-            </div>
+
+    <div id="sect-2">
+      <img src="/<%= game.logo %>" alt="logo" />
+      <button id="base">Base Game</button>
+      <button class="bt game_purchase purchase" data-id="<%= game._id %>" price="<%= game.price %>" 
+        <%= user.vaulted.some(v => v.equals(game._id)) ? 'disabled' : '' %>>
+        <i class="fa-solid fa-shop"></i>
+        <%= user.vaulted.some(v => v.equals(game._id)) ? 'Purchased' : game.price %>
+      </button>
+      
+      <button class="bt game_cart" data-id="<%= game._id %>" 
+        <%= (user.carted.some(c => c.equals(game._id)) || user.vaulted.some(v => v.equals(game._id))) ? 'disabled' : '' %>>
+        <i class="fa-solid fa-cart-plus"></i> 
+        <%= user.carted.some(v => v.equals(game._id)) ? 'Carted' : 'Add To Cart' %>
+      </button>
+      
+      <button class="bt game_wishlist" data-id="<%= game._id %>" 
+        <%= (user.wishlisted.some(w => w.equals(game._id)) || user.vaulted.some(v => v.equals(game._id))) ? 'disabled' : '' %>>
+        <i class="fa-solid fa-list"></i> 
+        <%= user.wishlisted.some(v => v.equals(game._id)) ? 'wished' : 'Add to Wish' %>
+      </button>
+      
+      <p>Developer : <%= game.developer %>
+      </p>
+      <p>Publisher : Ace-Up</p>
+    </div>
+  </div>
+
+  <div id="system-requirment">
+    <div>
+      <p id="my-os">
+        <i class="fa-brands fa-windows"></i> Windows System Requirement
+      </p>
+      <div id="comparison">
+        <div id="mini">
+          <div id="mini-rec">
+            <h3>Minimum</h3>
+            <h3>Recommended</h3>
+          </div>
+          <div>
             <div>
-              <div>
-                <h5>OS</h5>
-                <p><%= game.min.os %></p>
-              </div>
-              <div>
-                <h5>OS</h5>
-                <p><%= game.max.os %></p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h5>Processor</h5>
-                <p><%= game.min.cpu %></p>
-              </div>
-              <div>
-                <h5>Processor</h5>
-                <p><%= game.max.cpu %></p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h5>Memory</h5>
-                <p><%= game.min.RAM %></p>
-              </div>
-              <div>
-                <h5>Memory</h5>
-                <p><%= game.max.RAM %></p>
-              </div>
-            </div>
-            <div>
-              <div>
-                <h5>Graphics</h5>
-                <p><%= game.min.gpu %></p>
-              </div>
-              <div>
-                <h5>Graphics</h5>
-                <p><%= game.max.gpu %></p>
-              </div>
-            </div>
-  
-            <div id="lang">
-              <h5>Languages Supported</h5>
+              <h5>OS</h5>
               <p>
-                Audio: Portuguese - Brazil, Polish, Arabic, French, German,
-                Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
-                Traditional, Vietnamese, Turkish, Korean
-              </p>
-              <p>
-                Text: Portuguese - Brazil, Polish, Arabic, French, German,
-                Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
-                Traditional, Turkish, Vietnamese, Korean
-              </p>
-  
-              <p id="copy-right">
-                © 2020-2025 Ace-Up, Inc. <%= game.name %> and the <%= game.name %>
-                Logo are trademarks, service marks, and/or registered trademarks
-                of Ace-Up, Inc.
+                <%= game.min.os %>
               </p>
             </div>
+            <div>
+              <h5>OS</h5>
+              <p>
+                <%= game.max.os %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h5>Processor</h5>
+              <p>
+                <%= game.min.cpu %>
+              </p>
+            </div>
+            <div>
+              <h5>Processor</h5>
+              <p>
+                <%= game.max.cpu %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h5>Memory</h5>
+              <p>
+                <%= game.min.RAM %>
+              </p>
+            </div>
+            <div>
+              <h5>Memory</h5>
+              <p>
+                <%= game.max.RAM %>
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <h5>Graphics</h5>
+              <p>
+                <%= game.min.gpu %>
+              </p>
+            </div>
+            <div>
+              <h5>Graphics</h5>
+              <p>
+                <%= game.max.gpu %>
+              </p>
+            </div>
+          </div>
+
+          <div id="lang">
+            <h5>Languages Supported</h5>
+            <p>
+              Audio: Portuguese - Brazil, Polish, Arabic, French, German,
+              Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
+              Traditional, Vietnamese, Turkish, Korean
+            </p>
+            <p>
+              Text: Portuguese - Brazil, Polish, Arabic, French, German,
+              Italian, Spanish - Spain, Japanese, Russian, Thai, Chinese -
+              Traditional, Turkish, Vietnamese, Korean
+            </p>
+
+            <p id="copy-right">
+              © 2020-2025 Ace-Up, Inc. <%= game.name %> and the <%= game.name %>
+                  Logo are trademarks, service marks, and/or registered trademarks
+                  of Ace-Up, Inc.
+            </p>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>

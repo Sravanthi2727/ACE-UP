@@ -31,13 +31,13 @@ our main objectives:
     Cart/Wishlist Should Show Added Games
 
     Purchased Games Should Appear in G-Vault
-
-🚧 Pending Features:
     
     Game Page Redirect on Click
 
     Purchase, Add to Cart, etc., on Game Page
 
+🚧 Pending Features:
+    
     Redirect When G-Cash is Over & Implement Payment System
 
     

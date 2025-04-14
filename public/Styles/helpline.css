@@ -1,154 +1,167 @@
-#main-content-helpline{
-    width: 100%;
-    padding-top: 10vh;
-    padding-left: 10vh;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+#main-content-helpline {
+  width: 100%;
+  padding-top: 10vh;
+  padding-left: 10vh;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
-
 
 /* Header */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2em;
-    padding:  20px 20px;
-    color: #FF7300; /* Neon Orange */
-    text-shadow: 0 0 10px #1db954 ;
+
+header h1 {
+  font-size: xxx-large;
+  font-family: "Curlz MT";
+  background: linear-gradient(90deg, #ff9900, #1db954);
+  color: transparent;
+  background-clip: text;
+  text-align: center;
 }
 
-.sub-heading {
-    font-size: 50px;
-    margin-top: 5px;
-    color: white;  /*#bbb*/
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  padding: 20px 20px;
+  color: #ff7300; /* Neon Orange */
+  text-shadow: 0 0 10px #1db954;
+}
+
+header .sub-heading {
+  font-size: 30px;
+  margin-top: 5px;
+  color: white; /*#bbb*/
 }
 
 /* Search Bar */
 #search {
-    width: 80%;
-    max-width: 400px;
-    padding: 12px;
-    border-radius: 5px;
-    border: none;
-    background: #222;
-    color: white;
-    text-align: center;
-    
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  background: #222;
+  color: white;
+  text-align: center;
 }
 
 /* Help Categories */
 .categories {
-    padding: 40px 20px;
-    
+  padding: 40px 20px;
 }
 
 .categories h2 {
-    font-size: 26px;
-    color: white;
-    text-shadow: 0 0 10px #FF7300, 0 0 20px #FF4500, 0 0 40px #FF7300;
+  font-size: 26px;
+  color: white;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
 }
 
 /* Grid Layout */
 .category-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 20px;
-    width: 100%;
-    margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  padding: 20px;
+  width: 100%;
+  margin: auto;
 }
 
 .category {
-    padding: 80px 30px;
-    border-radius: 15px;
+  padding: 80px 30px;
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
+  transition: 0.3s;
+  background-color: #1e1e1e;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+}
+
+.category a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+  text-transform: uppercase;
+}
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 70px;
+  padding: 20px;
+  max-width: 100%;
+  margin: auto;
+}
+
+/* Game Cards */
+.explore-games {
+  color: white;
+  text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+.game-card {
+  padding: 70px 30px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
+  transition: 0.3s ease-in-out;
+  background-color: #1e1e1e;
+  background-size: cover;
+  background-position: center;
+  opacity: 0.9;
+  a {
+    text-decoration: none;
     font-size: 20px;
     font-weight: bold;
     color: white;
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
-    transition: 0.3s;
-    background-color: #1e1e1e;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    text-transform: uppercase;
+  }
 }
 
-.category a{
-    text-decoration: none; 
- font-size: 18px;
- font-weight: bold;
- color: white;
- }
-.games-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 70px;
-    padding: 20px;
-    max-width: 100%;
-    margin: auto;
-} 
-
-/* Game Cards */
-.explore-games{
-    color: white;
-  text-shadow: 0 0 10px #FF7300, 0 0 20px #FF4500, 0 0 40px #FF7300;
-
-}
-
-
-.game-card {
-    padding: 70px 30px;
-    border-radius: 15px;
-    background-size: cover;
-    background-position: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
-    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
-    transition: 0.3s ease-in-out;
-    background-color: #1e1e1e;
-    a{
-       text-decoration: none; 
-    font-size: 18px;
-    font-weight: bold;
-    color: white;
-    }
-    
-
-}
-
-.category:hover, .game-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 8px 20px #FF7300;
-    opacity: 0.9;
-    cursor: pointer;
+.category:hover,
+.game-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 8px 20px #9d00ff;
+  opacity: 0.9;
+  cursor: pointer;
 }
 
 /* FAQ Section */
 .faq {
-    padding: 2em;
-    margin-top: 40px;
-    
+  padding: 2em;
+  margin-top: 40px;
 }
 
 .faq h2 {
-    font-size: 26px;
-    font-family: "Curlz MT";
-    background: linear-gradient(90deg, #ff9900, #1db954);
-    color: transparent;
-    background-clip: text;
+  font-size: 26px;
+  font-family: "Curlz MT";
+  background: linear-gradient(90deg, #ff9900, #1db954);
+  color: transparent;
+  background-clip: text;
 }
 
 .faq-item {
-    margin-top: 20px;
-    padding: 15px;
-    border-radius: 10px;
-    background: #252525;
-    box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
-    transition: 0.3s;
-    color: white;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #252525;
+  box-shadow: 0px 5px 15px rgba(128, 128, 128, 0.5);
+  transition: 0.3s;
+  color: white;
 }
 
 .faq-item:hover {
-    transform: scale(1.02);
-    cursor: pointer;
+  transform: scale(1.02);
+  cursor: pointer;
 }

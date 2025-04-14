@@ -13,6 +13,7 @@ const gamedata= new Schema({
         poster: String,
         logo:String,
         video: String,
+        logo:String,
         rating : Number,
         smalldes: String,
         largedes: String,

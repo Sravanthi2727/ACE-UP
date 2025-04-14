@@ -1,8 +1,9 @@
 <div class="main-content-gvault">
     <h3>Your Purchased Games</h3>
-
+    <% let gvault_item = 0 %>
     <div class="vault">
         <% user.vaulted.forEach(game=> { %>
+            <% gvault_item++ %>
             <div class="vault-item">
                 <img src="<%= game.banner %>" alt="<%= game.name %>">
                 <div class="game_details">
@@ -12,5 +13,13 @@
                 </div>
             </div>
         <% }) %>
+        <div class="gvault-summary">
+            <% if (gvault_item===0) { %>
+                <h2 class="gvault-total-text">No items in the gvault</h2>
+                <% }else{ %>
+                    <h2 class="gvault-total-text">No of Items are -><%= gvault_item %>
+                    </h2>
+                    <% } %>
+        </div>
     </div>
 </div>
