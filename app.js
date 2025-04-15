@@ -3,7 +3,8 @@ const app = express();
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const expressLayout = require("express-ejs-layouts");
-const port = 3000;
+const port = process.env.port || 3000;
+require("dotenv").config(); //Load environment variables
 
 app.set("view engine", "ejs");
 app.set("layout", "layouts/main");
