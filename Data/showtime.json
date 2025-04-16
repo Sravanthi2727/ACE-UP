@@ -4,7 +4,7 @@
   "banner": "images/F1_25 banner.jpg",
   "poster": "images/F1_25 home.jpg",
   "logo": "images/F1_25 logo.jpg",
-  "video": "videos/F1_25.mp4",
+  "video": "<iframe class='game_trailer' src='https://www.youtube.com/embed/xDzAUYH6I7A?autoplay=1&si=inus5WmS8CL1EByN' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
   "rating": 4.4,
   "smalldes": "The official Formula One racing game returns with enhanced realism, new circuits, and dynamic career mode.",
   "largedes": "<p><b style=\"color: #1DB954;\">REAL RACING EVOLVED</b> :- Feel the speed in every turn with improved physics, tire wear systems, and AI behavior.</p><p><b style=\"color: #1DB954;\">BECOME A CHAMPION</b> :- Start your journey in My Team mode, rise through the ranks, and dominate the F1 circuit like never before.</p>",
