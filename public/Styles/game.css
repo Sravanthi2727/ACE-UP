@@ -132,7 +132,7 @@
 
 #sect-2 img {
     width: 50%;
-    height: auto;
+    max-height: 296px;
     transform: scale(1.3);
 }
 #sect-2 #base {
