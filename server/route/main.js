@@ -3,7 +3,7 @@ const express = require("express");
 const route = express.Router();
 const gdata = require("../model/gamedata");
 const udata = require("../model/userdata");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const default_user = async () => {
