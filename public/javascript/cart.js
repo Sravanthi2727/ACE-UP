@@ -3,7 +3,7 @@ let user;
 // Fetch user data
 const fetchUser = async () => {
     try {
-        const response = await fetch("http://localhost:3000/cart", { method: "PUT" });
+        const response = await fetch("/cart", { method: "PUT" });
         user = await response.json();
     } catch (error) {
         console.error("Error:", error);
@@ -18,7 +18,7 @@ fetchUser();
 const modify_cart = async (cart) => {
     console.log("Ima in cart")
     try {
-        const response = await fetch("http://localhost:3000/cart", {
+        const response = await fetch("/cart", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ carted: cart })
@@ -60,7 +60,7 @@ const modify_vault = async (id) => {
 
 const modify_gcash = async(cash)=>{
     try {
-        const response = await fetch("http://localhost:3000/gcash", {
+        const response = await fetch("/gcash", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ gcash: cash })
