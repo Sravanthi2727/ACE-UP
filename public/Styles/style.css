@@ -325,7 +325,6 @@ body {
     flex-direction: column;
     justify-content: space-around;
     transform: scale(0.1);
-    transition: transform 2s;
   }
   .login-box a {
     color: #0a66c2;
