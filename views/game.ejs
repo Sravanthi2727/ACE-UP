@@ -6,9 +6,11 @@
           <%= game.name %>
         </h1>
         <p id="rating">
-          <%= game.rating %>
+         Rating : <%= game.rating %> Stars
         </p>
-        <video src="/<%= game.video %>" autoplay controls></video>
+        <div class="game_trailer">
+          <%= game.video%>
+        </div>
         <p id="small-description">
           <%= game.smalldes %>
         </p>
