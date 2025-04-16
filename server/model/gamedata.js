@@ -1,7 +1,11 @@
+const mongoose = require('mongoose');
 
-const mongoose = require("mongoose");
-
-mongoose.connect("mongodb://127.0.0.1:27017/ACE_UP");
+mongoose.connect('mongodb+srv://priyanshparekh24:Pass%4025@ace-up-data.wkfpvme.mongodb.net/ACE_UP', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('✅ Connected to MongoDB Atlas!'))
+.catch(err => console.error('❌ Connection error:', err));
 
 const Schema = mongoose.Schema;
 

@@ -3,7 +3,7 @@ const express = require("express");
 const route = express.Router();
 const gdata = require("../model/gamedata");
 const udata = require("../model/userdata");
-const bcrypt = require("bcrypt");
+const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
 const default_user = async () => {
@@ -175,21 +175,27 @@ route.get("/gvault", login, async (req, res) => {
 
 // route to update the value of gcash
 route.put("/gvault", login, async (req, res) => {
-    if (req.user.email === "deafault") {
+    try {
         let gid = req.body.gid;
         gid = new mongoose.Types.ObjectId(gid);
-        default_user_vault(gid);
-        res.redirect("/gvault");
-    } else {
-        let gid = req.body.gid;
-        gid = new mongoose.Types.ObjectId(gid);
-        await req.user.updateOne(
+        // Update the vault in the database
+        const result = await req.user.updateOne(
             { $push: { vaulted: gid } }
         );
-        res.redirect("/gvault");
-
+        
+        if (result.modifiedCount > 0) {
+            // If the update was successful, send a success response
+            res.json({ success: true, message: "Game added to vault" });
+        } else {
+            // If no change was made, send a failure response
+            res.json({ success: false, message: "Failed to add game to vault" });
+        }
+    } catch (error) {
+        console.error("Error updating vault:", error);
+        res.status(500).send("Error updating vault");
     }
-})
+});
+
 
 //route for wishlist
 route.get("/wishlist", login, async (req, res) => {

@@ -3,7 +3,7 @@ let user;
 // Fetch user data
 const fetchUser = async () => {
     try {
-        const response = await fetch("http://localhost:3000/cart", { method: "PUT" });
+        const response = await fetch("/cart", { method: "PUT" });
         user = await response.json();
     } catch (error) {
         console.error("Error:", error);
@@ -18,7 +18,7 @@ fetchUser();
 const modify_cart = async (cart) => {
     console.log("Ima in cart")
     try {
-        const response = await fetch("http://localhost:3000/cart", {
+        const response = await fetch("/cart", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ carted: cart })
@@ -37,19 +37,30 @@ const modify_cart = async (cart) => {
 //sending array to backend to add to vault
 const modify_vault = async (id) => {
     try {
-        const response = await fetch("http://localhost:3000/gvault", {
+        const response = await fetch("/gvault", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ gid: id })
         });
+
+        const data = await response.json();
+
+        if (data.success) {
+            alert("Game added to vault!");
+            // Optionally, update the UI to reflect the new state
+        } else {
+            alert("Failed to add game to vault.");
+        }
     } catch (error) {
         console.error("Error:", error);
+        alert("Error adding game to vault.");
     }
 }
 
+
 const modify_gcash = async(cash)=>{
     try {
-        const response = await fetch("http://localhost:3000/gcash", {
+        const response = await fetch("/gcash", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ gcash: cash })

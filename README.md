@@ -1,6 +1,6 @@
 # ACE-UP
 
-Our Page link : https://sravanthi2727.github.io/ACE-UP/  -- this link will won't work from now as we have linked with backend. After creating the link, we will add it.
+Our Page link : https://ace-up-1.onrender.com/ 
 
 This project is a web-based digital storefront inspired by the Epic Store, allowing users to browse, purchase, and download games. It features agame listings, and secure transactions. Built with HTML, CSS, and JavaScript, the platform aims to provide a seamless user experience while implementing essential e-commerce functionalities.
 
@@ -39,6 +39,7 @@ our main objectives:
 🚧 Pending Features:
     
     Redirect When G-Cash is Over & Implement Payment System
+    User profile options
 
     
 
