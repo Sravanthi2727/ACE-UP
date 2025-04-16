@@ -39,6 +39,7 @@ our main objectives:
 🚧 Pending Features:
     
     Redirect When G-Cash is Over & Implement Payment System
+    User profile options
 
     
 
