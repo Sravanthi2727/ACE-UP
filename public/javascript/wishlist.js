@@ -3,7 +3,7 @@ let userr;
 // Fetch user data
 const fetchUserr = async () => {
     try {
-        const response = await fetch("http://localhost:3000/cart", { method: "PUT" });
+        const response = await fetch("/cart", { method: "PUT" });
         userr = await response.json();
     } catch (error) {
         console.error("Error:", error);
@@ -16,7 +16,7 @@ fetchUserr();
 // sending array to backend to remove game from wishlist
 const modify_wishlist = async (wish) => {
     try {
-        const response = await fetch("http://localhost:3000/wishlist", {
+        const response = await fetch("/wishlist", {
             method: "DELETE",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ wishlisted: wish })
@@ -34,7 +34,7 @@ const modify_wishlist = async (wish) => {
 
 const modify_wishlistt = async (wish) => {
     try {
-        const response = await fetch("http://localhost:3000/wishlist", {
+        const response = await fetch("/wishlist", {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ wishlisted: wish })
@@ -54,7 +54,7 @@ const modify_wishlistt = async (wish) => {
 // sending game id to backend to add it in cart
 const modify_cartt = async (cart) => {
     try {
-        const response = await fetch("http://localhost:3000/cart", {
+        const response = await fetch("/cart", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ carted: cart })
